@@ -1,6 +1,5 @@
 ![evox_wiki.png](/evox_wiki.png)
 
-
 # Introduction
 
 **Welcome to [Evolution X Wiki](https://wiki.evolution-x.org)**
@@ -20,11 +19,11 @@ Let's get started!
 - **Akito Mizukito** (RealAkito) - Co-Founder, Project Manager
 - **Anierin Bliss** (AnierinB) - Co-Founder, Project Specialist
 
-### 📊 Technical informations
+### 📊 Technical information
 
-- Since 06/2024, **EvolutionX** is now based on LineageOS for more stability and performances gains.
+- Since 06/2024, **EvolutionX** is now based on [LineageOS](https://lineageos.org/) for more stability and performances gains.
 
-> Major version is currently `10` (VIC).
+> Major version is currently `10` (VIC/Android 15).
 {.is-success}
 
 # Evolution X Related Links
