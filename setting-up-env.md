@@ -43,8 +43,6 @@ sudo apt update && sudo apt install bc bison build-essential ccache curl flex g+
 If you face a problem while installing libesd0-dev package, follow the steps
 from [this Stack Overflow post](https://askubuntu.com/questions/1082722/unable-to-locate-package-libesd0-dev-on-ubuntu-18-04#)
 
-You can install those packages instead: `libncurses5 curl python-is-python3`
-
 ## 3: Make A Folder And Initialize Repo ##
 
 This will create a folder under `/home/$user` (your current user)
