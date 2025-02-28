@@ -6,7 +6,8 @@
     "nextra": "^4.2.13",
     "nextra-theme-docs": "^4.2.13",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5"
   },
   "name": "wiki",
   "module": "index.ts",
