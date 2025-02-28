@@ -40,9 +40,6 @@ A 64-bit version of Ubuntu (22.04 is recommended as of now because of LTS).
 sudo apt update && sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev lib32ncurses5-dev libncurses5 libncurses5-dev python-is-python3
 ```
 
-If you face a problem while installing libesd0-dev package, follow the steps
-from [this Stack Overflow post](https://askubuntu.com/questions/1082722/unable-to-locate-package-libesd0-dev-on-ubuntu-18-04#)
-
 ## 3: Make A Folder And Initialize Repo ##
 
 This will create a folder under `/home/$user` (your current user)
