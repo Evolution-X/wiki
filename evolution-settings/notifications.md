@@ -1,80 +1,39 @@
-# TO BE REWORKED
+# Notifications
 
-# Notification
+Alerts, interface
 
-## General
+## Heads up
 
-### Heads up
-Pop up statusbar notification
+### Heads Up Notifications Enabled
 
-### Notification light
-Edit notification light settings by apps
+### Compact heads-up
 
+Display notifications in compact size
 
-## Notification ticker
+### Less boring
 
-### Ticker
-Notification preview in status bar
+Display popup notifications only for alarm, dialer and messaging app
 
-### Ticker animation
-Customize ticker animation
+## Interface
 
-### Ticker duration
-Edit ticker duration
+### Notification icons
 
+Maximum notification icons visible on status bar
 
-## Notification LED settings
+### Alert slider notifications
 
-### Battery charging light
-Customization for battery light
+Display notification when changing alert slider position
 
+### Edge light
 
-## Screen
-
-### Edge lightning
 Light up the side edges of the screen on notification pulse
 
-### Duration
-Edit duration of Edge lightning effect
+### Kill app
 
-### Edge light color
-You can define a color used for Edge lightning or generate it based on notify type
-
-
-## System
-
-### Force close notifications
-Show a dialog when an application crashes
-
-
-## Miscellaneous
-
-### Force expanded notifications
-Force apps that support expanded notifications
-
-### Kill app button
 Show a kill app button in the notification's longpress menu
 
+## Sounds & vibration
 
-## Notification option
+### Alert while display on
 
-### Notification vibration
-Vibrate or not on notifications
-
-### Noisy notifications if screen on
-Disable to block notifications sound and vibration when the screen is awake
-
-
-## Doze brightness options
-
-### Blink flashlight on call
-Blink flashlight when a call is received
-
-### Vibrate on connect
-Enable to vibrate after call connect
-
-### Vibrate on call waiting
-Enable to vibrate while call is on waiting
-
-### Vibrate on disconnect
-Enable to vibrate after call disconnect
+Play sound and vibration for notifications while the display is on

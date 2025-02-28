@@ -1,63 +1,45 @@
-# TO BE REWORKED
-
 # Miscellaneous
 
+Developer options, spoofing
 
-## General
+## Spoofing
 
-### Wake up on charge
-Wake up device if charger is plugged/unplugged
+### Component spoofing
 
-### Charging animation
-Display an animation when the device is plugged in
+Bypass app restrictions by spoofing components
 
-### Screenshot type
-Set what type of screenshot you want to do, full or partial
+## Developer options
 
+### Freeform launch mode
 
-## Developer option items
+### Hide applist
 
-### USB configuration
-Choose the default behaviour when connected to a device via USB
+Prevent apps from checking selected apps from appslist
 
-### ADB notification
-Display a notification when Android debugging is enabled
+### Smart Pixels
 
+Save battery by shutting off extra pixels
 
-## System options
+### Default Usb Configuration
 
-### Prevent accidental wake-up
-Check the proximity sensor prior to waking up screen
+### Hide Developer Status Settings
 
-### Sensor block per-package
-Block access to certain sensors for some apps to save battery
+### No Storage Restrict
 
-### Allow signature spoofing
-Allow apps to bypass security systems by pretending to be a different app
+### Ignore wallpaper dimming requests
 
+Blocks all apps from setting the wallpaper dim\nForces dim to 0
 
-## Settings dashboard items
+### Unlimit screenrecord
 
-### Dashboard conditions
-Enable or disable dashboard conditions
+Remove the 15GiB file size limit\nMay result in a larger than needed output file
 
-### Dashboard suggestions
-Enable or disable dashboard suggestions
+### Hide Screen Capture Status
 
+### Allow application downgrade
 
-## Doze settings
+Allow downgrading system applications, which may result in crashes and data loss
 
-### Time in state
-Show CPU frequency statistics
+### Ignore window secure flags
 
-### Doze settings
-Edit doze config settings
-
-
-## Wakelock blocker
-
-### Alarm blocker
-Block alarm while screen is off
-
-### Wakelock blocker
-Block system wakelock
+Remove restrictions on screenshots and screen recordings for all applications, potentially risking privacy leaks
