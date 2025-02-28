@@ -33,14 +33,14 @@ To do so, you can visit our website and check if your device is available.
 > Note that Google apps and services (gapps) are already included !
 
 Check the XDA thread of your device to find the required vendor or firmware for the ROM and download it.
-The softwares needed will **always** be highlighted on XDA.
+The pieces of software needed will **always** be highlighted on XDA.
 
 ### Flashing the ROM ###
 After having downloaded the correct ROM build and vendor/firmware zip file, we can proceed with the flashing process. Boot your device into recovery mode, and wipe data, cache and system using our recovery.
 
 Flash the required vendor/firmware and the downloaded ROM build. Reboot to system and enjoy the ROM.
 
-*The first bootup could take some additional time*
+*The first boot could take some additional time*
 
 > Once again, the instructions provided here are **only for reference**; you should **ALWAYS** follow the instructions on the XDA thread.
 {.is-warning}
@@ -92,10 +92,10 @@ Then plug your phone to your computer, and simply execute this command:
 adb sideload YourZipFile.zip
 ```
 
-Now, you just have to wait for the sideload to complete.
+Now, you just have to wait for the sideload process to complete.
 Follow the instructions displayed on the screen, depending on the device, it could propose you to update the recovery at the same time.
 
-> Depending on the build type, the sideload can be "stuck" but it's **normal** !
+> Depending on the build type, the sideload process can be "stuck" but it's **normal** !
 • A userdebug build will stop around 47%
 • A user build will stop around 97%
 {.is-success}
@@ -108,14 +108,14 @@ If you want to do so, put the zip file on your sd card, and select this build af
 
 The rom will update itself like with ADB.
 
-# Do not relock your bootloader !
+# Do not re-lock your bootloader !
 
 We know it can be tempting, you may want to do it since you've seen the option in developer settings.
 Right, NO. **DO NOT.**
 
-## DO NOT RELOCK YOUR BOOTLOADER. Not with EvolutionX on it.
+## DO NOT RE-LOCK YOUR BOOTLOADER. Not with EvolutionX on it.
 
-Only a few roms (GrapheneOs for example) and only a few devices (some pixels, and some oneplus) are able to do this safely. Otherwise you will only brick your device, and it'll be a REALLY COMPLICATED situation.
+Only a few roms (GrapheneOS for example) and only a few devices (some Pixels, and some OnePlus) are able to do this safely. Otherwise, you will only brick your device, and it'll be a REALLY COMPLICATED situation.
 
 > Please, never re-lock your bootloader while being on EvoX. You'll lose your device forever.
 {.is-danger}

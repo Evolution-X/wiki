@@ -1,6 +1,6 @@
 # Congratulations & welcome to the Evolution X team! <img src="/reimu.gif" alt="sitefav" style="width:40px; vertical-align:middle;">
 
-This page will walk you through the new device maintainer onboarding proccess!
+This page will walk you through the new device maintainer onboarding process!
 
 > References to "**us**" or "**we**" mean [Joey](https://github.com/joeyhuab) or [Anierin](https://github.com/AnierinBliss) in the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your device's codename throughout this proccess.
 {.is-info}
@@ -15,7 +15,7 @@ Specify the repositories you need created or access to under the [Evolution X De
 
 Once these repositories are created, and you have been granted access and pushed, please delete `lineage.dependencies` (if existing) and set up `evolution.dependencies` in each applicable repository for device source syncing via [roomservice](https://github.com/Evolution-XYZ/vendor_evolution/blob/udc/build/tools/roomservice.py).
 
-Additionally, provide a list of image names required to be flashed in order to boot Evolution X recovery (initial installation images) coming from the stock ROM of your device. (E.g `boot`, `recovery` etc)
+Additionally, provide a list of image names required to be flashed in order to boot Evolution X recovery (initial installation images) coming from the stock ROM of your device. (E.g `boot`, `recovery` etc.)
 
 > You **MAY NOT** substitute Evolution X recovery with **TWRP or any of its derivatives (OFOX/PBRP)**
 {.is-danger}
@@ -58,7 +58,7 @@ SourceForge Username: anierin
 
 ### Roomservice chain ###
 
-Here is an example of how to setup the roomservice chain (mentionned in [lunch guide](/lunch).)
+Here is an example of how to set up the roomservice chain (mentioned in [lunch guide](/lunch).)
 We'll use Panther again as an example.
 
 `device_google_panther` :
@@ -100,7 +100,7 @@ But we can see that Pantah itself has a dependencie, `device_google_gs201`, comm
   }
 ]
 ```
-And again, this tree has an other dependencies:
+And again, this tree has more dependencies:
 `device_google_gs101` :
 
 ```json
@@ -132,8 +132,7 @@ In order to set it up, you only have to
 export EVO_BUILD_TYPE=Official
 ```
 
-In order to set it up, you only have to
-To make sure it's applied every time, you can add it at the end of your `~/.bashrc` file:
+In order to set it up, you only have to make sure it's applied every time, you can add it at the end of your `~/.bashrc` file:
 
 ```bash
 echo 'export EVO_BUILD_TYPE=Official' >> ~/.bashrc
@@ -262,7 +261,7 @@ Example :
         "super_empty",
         "recovery",
         "other image..."
-      ]
+]
 ```
 
 

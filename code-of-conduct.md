@@ -33,7 +33,7 @@
 | **Act 1:**   Maintainer must upload their build, and wait for it to be mirrored before making a pull request or releasing the build.
 | **Act 1.2:**   If the maintainer released a build with RC, Beta, or Alpha tag, the maintainer will be allowed to use Google Drive for publishment but will not be pushed to OTA system.
 | **Act 1.3:**   Maintainer can only upload flashable "ROM.zip" or fastboot ROM into the project's SourceForge and is not allowed to upload anything other than that.
-| **Act 2:**   Maintainer reserves rights to pull-back the builds in any case.
+| **Act 2:**   Maintainer reserves rights to pull back the builds in any case.
 | **Act 3:**   Maintainer must test their build before releasing, if found untested then the maintainer will be warned, and on the second offend, the right to maintainship will be revoked.
 | **Act 4:**   Maintainer must follow the following format whenever the maintainer pull request to the [official_devices](https://github.com/evolution-x-devices/official_devices) repo.
 `Device_Codename: Month/Day/Year Update`
