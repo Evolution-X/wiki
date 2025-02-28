@@ -4,10 +4,10 @@
 
 ## Categories
 
-- [Lock screen](lock_screen.md)
-- [Miscellaneous](miscellaneous.md)
-- [Notifications](notifications.md)
-- [Power menu](power_menu.md)
-- [Quick settings](quick_settings.md)
-- [Status bar](status_bar.md)
-- [Themes](themes.md)
+- [Lock screen](/evolution-settings/lock_screen)
+- [Miscellaneous](/evolution-settings/miscellaneous)
+- [Notifications](/evolution-settings/notifications)
+- [Power menu](/evolution-settings/power_menu)
+- [Quick settings](/evolution-settings/quick_settings)
+- [Status bar](/evolution-settings/status_bar)
+- [Themes](/evolution-settings/themes)

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "clsx": "^2.1.1",
     "material-symbols": "^0.28.2",
     "next": "^15.2.0",
     "nextra": "^4.2.13",
@@ -22,6 +23,5 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
-  },
-  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+  }
 }

@@ -1,11 +1,17 @@
-> **23/02/2024**
-> **FROM NOW ON, FOR ANDROID 15, YOU NEED TO DO `lunch lineage_$device-ap4a-$build_type`.**
-{.is-danger}
+import { Callout, Image } from "nextra/components";
+import SuccessCallout from "../app/components/SuccessCallout";
+
+<Callout type="error">
+  **23/02/2024** **FROM NOW ON, FOR ANDROID 15, YOU NEED TO DO `lunch
+  lineage_$device-ap4a-$build_type`.**
+</Callout>
 
 Every time a release will change (E.g changing from `ap3a` to `ap4a`) I will update the wiki. If you find out it's not up-to-date, feel free to ping me on discord @onelots or [edit this page](https://github.com/Evolution-X/wiki/edit/main/lunch.md).
 
-> Since I will not update the whole wiki every time, I'll use `$release` instead of specifying the actual release.
-{.is-info}
+<Callout type="info">
+  Since I will not update the whole wiki every time, I'll use `$release` instead
+  of specifying the actual release.
+</Callout>
 
 **As of Now : Release is :**
 
@@ -18,9 +24,11 @@ So commands will be in the form `lunch lineage_$device-ap4a-$build_type`.
 In this guide, we'll see how to use lunch, how it works and how to setup it properly.
 We'll see how to setup a device for building too.
 
-> Please check [Setup Environment](/setting-up-env) before starting. A minimum git knowledge is required.
-Besides, make sure the disk you will work on is formatted with **Ext4**.
-{.is-warning}
+<Callout type="warning">
+  Please check [Setup Environment](/setting-up-env) before starting. A minimum
+  git knowledge is required. Besides, make sure the disk you will work on is
+  formatted with **Ext4**.
+</Callout>
 
 # 1: Unofficial build
 
@@ -36,11 +44,14 @@ In this file, we'll add all the trees we need. It usually depends on the device 
 
 I say tree(s) because sometimes, a device shares commons trees with other devices using the same CPU, for example.
 
-> During all this guide, we'll use Polaris (Xiaomi Mi Mix 2s) as an example.
-{.is-info}
+<Callout type="info">
+  During all this guide, we'll use Polaris (Xiaomi Mi Mix 2s) as an example.
+</Callout>
 
-> Quick tip: if a device is supported by LineageOS, look into lineage.dependencies, usually everything is in it !
-{.is-success}
+<Callout type="success">
+  Quick tip: if a device is supported by LineageOS, look into
+  lineage.dependencies, usually everything is in it !
+</Callout>
 
 ---
 
@@ -90,8 +101,9 @@ We tell the `repo sync` command to clone https://github.com/lineageos/android_de
 
 ---
 
-> `<device>.xml` will need to be located under `.repo/local_manifests/<device>.xml`
-{.is-warning}
+<Callout type="warning">
+  `<device>.xml` will need to be located under `.repo/local_manifests/<device>.xml`
+</Callout>
 
 When your device.xml is written, and in the right directory, simply sync the sources:
 
@@ -113,8 +125,9 @@ But for Polaris, it would look like
 lunch lineage_polaris-$release-userdebug
 ```
 
-> If everything went well, `m evolution` will start the build.
-{.is-success}
+<SuccessCallout>
+  If everything went well, `m evolution` will start the build.
+</SuccessCallout>
 
 ---
 
@@ -123,8 +136,10 @@ lunch lineage_polaris-$release-userdebug
 Congrats! you are an official maintainer.
 Now that you have been granted access to your device's trees, you can setup the automatic lunch.
 
-> When you are an official maintainer, you don't need device.xml anymore since everything will be synced automatically when lunch command is called.
-{.is-info}
+<Callout type="info">
+  When you are an official maintainer, you don't need device.xml anymore since
+  everything will be synced automatically when lunch command is called.
+</Callout>
 
 EvolutionX uses the same system as LineageOS for syncing dependencies automatically without having to rewrite the device.xml every time.
 
@@ -149,8 +164,9 @@ As you can see, we find only 2 trees instead of 6 in the `polaris.xml`
 But as you can see too, there is a `device_xiaomi_sdm845-common` repository.
 Looking at the `evolution.dependencies` in this repo, we see that it contains all the trees needed for the devices using the same common tree, so no need to set it up **again**
 
-> In this situation, don't add the trees again ! it will generate a conflict.
-{.is-danger}
+<Callout type="error">
+  In this situation, don't add the trees again ! it will generate a conflict.
+</Callout>
 
 Of course, it may depend. Always check the `lineage.dependencies`, it will contains all you need.
 
@@ -178,8 +194,10 @@ You can of course setup external repos. Example with polaris with Xiaomi camera 
 As you can see, we find almost the same thing as `polaris.xml`: `repository`, `target_path`, `branch`.
 What will change is the `remote`. You have to pick a remote already defined by EvolutionX.
 
-> Remotes are defined by EvolutionX directly, and you can find remotes list [here](https://github.com/Evolution-X/manifest/blob/udc/snippets/evolution.xml).
-{.is-info}
+<Callout type="info">
+  Remotes are defined by EvolutionX directly, and you can find remotes list
+  [here](https://github.com/Evolution-X/manifest/blob/udc/snippets/evolution.xml).
+</Callout>
 
 When it's done, simply lunch
 
@@ -189,21 +207,18 @@ lunch lineage_$device-$release-$build_type
 
 This command will clone everything for you directly !
 
-> This is explained [here](/onboarding) too.
-{.is-success}
-
+<Callout type="info">This is explained [here](/onboarding) too.</Callout>
 
 # 3: A quick memo about the build args
 
 When lunching, you noticed every time we `lunch lineage_polaris-$release-userdebug`.
 Actually, a few more args are available.
 
-
-| Build Type | Description                                      |
-|------------|--------------------------------------------------|
-| `user`     | Optimized for end users, with limited access to debugging and development tools. Used for official releases. |
-| `userdebug`| Similar to `user` but with additional debugging tools enabled. Used for testing and debugging on near-final builds. Can be used for releases as well. |
-| `eng`      | Includes all development tools and debugging options. Used by developers during active development and testing.       |
+| Build Type  | Description                                                                                                                                           |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `user`      | Optimized for end users, with limited access to debugging and development tools. Used for official releases.                                          |
+| `userdebug` | Similar to `user` but with additional debugging tools enabled. Used for testing and debugging on near-final builds. Can be used for releases as well. |
+| `eng`       | Includes all development tools and debugging options. Used by developers during active development and testing.                                       |
 
 The different commands would be :
 
@@ -223,8 +238,7 @@ or
 lunch lineage_polaris-$release-eng
 ```
 
-> eng build is **NOT** intended for release.
-{.is-danger}
+<Callout type="error">eng build is **NOT** intended for release.</Callout>
 
 When it's done:
 
@@ -232,4 +246,18 @@ When it's done:
 m evolution
 ```
 
-**and #KeepEvolving!** <img src="/favicons/sfav.png" alt="sitefav" style="width:20px; vertical-align:middle;">
+<div
+  style={{
+    display: "flex",
+    paddingTop: 5,
+  }}
+>
+  **and #KeepEvolving!**{" "}
+  <Image
+    src="/icon.svg"
+    alt="Evolution X Logo"
+    width={12}
+    height={12}
+    style={{ marginLeft: 5 }}
+  />
+</div>

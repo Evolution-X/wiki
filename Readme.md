@@ -11,8 +11,7 @@ Please keep in mind some things won't work with your favorite markdown editor, b
 For example,
 
 ```markdown
-> This is a blockquote
-{.is-danger}
+<Callout type="error"> This is a blockquote</Callout>
 ```
 
 This will probably not work in your markdown editor.

@@ -4,6 +4,7 @@
     "": {
       "name": "wiki",
       "dependencies": {
+        "clsx": "^2.1.1",
         "material-symbols": "^0.28.2",
         "next": "^15.2.0",
         "nextra": "^4.2.13",
