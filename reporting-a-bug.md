@@ -1,4 +1,5 @@
 # Reporting a bug
+
 Aaaaah, bugs. Yes, it is annoying. But how to fight against it ?
 
 > Disclaimer: 99% of the time, **we are aware of the bugs.**
@@ -20,7 +21,7 @@ Here is a list of things you can do before rushing to talk with your maintainer 
 
 ## I've done what is said above, but no one reported it yet...
 
-Okay, maybe your bug is unknow. You should report it to your maintainer obviously, but there is a way to do so !
+Okay, maybe your bug is unknown. You should report it to your maintainer obviously, but there is a way to do so !
 
 > Maintainers need real **bugs report**, not just **complaints**.
 {.is-success}
@@ -38,21 +39,23 @@ If you want to please your maintainer, here is how you should make a bug report.
 
 **How can I take a logcat?**
 
-You can use ADB to record a logcat by using the command
+You can use ADB to record a logcat by using the command:
+
 ```bash
 adb logcat -d
 ```
 
-Alternatively you can use the [syslog](https://play.google.com/store/apps/details?id=com.tortel.syslog&hl=en_US) app.
+Alternatively you can use the [syslog](https://play.google.com/store/apps/details?id=com.tortel.syslog&hl=en_US) or [LogFox](https://github.com/F0x1d/LogFox).
 
 ## Example bug report format
 
 Bug description: `<write the description of the bug here>`
 How to reproduce: `<write the method of reproducing the bug here>`
-Logcat: `<upload your logcat to our `[paste server](https://paste.evolution-x.org) `and paste the link here>`
+Logcat: `<upload your logcat to our`[paste server](https://paste.evolution-x.org) `and paste the link here>`
 Screenshots: `<you can attach screenshots to the bug report>`
 
 ## Why do I need to keep the bug reporting rules?
+
 It is **way easier** for the developer and for other users as well, to see your bug report organized and not just a complaint.
 This way the developer will be able to implement a solution to the bug you found and other users won't re-report the bug.
 
