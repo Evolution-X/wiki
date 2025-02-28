@@ -1,4 +1,4 @@
-![evox_wiki.png](/evox_wiki.png)
+![Evolution X banner](/evox_wiki.png)
 
 # Introduction
 
