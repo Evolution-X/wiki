@@ -1,6 +1,6 @@
 # Setting up Environments to build Evolution X
 
-This guide is for __Linux Users__ targetting Ubuntu 22.04 LTS users.
+This guide is for __Linux Users__ targeting Ubuntu 22.04 LTS users.
 
 > Make sure you have the appropriate performance requirements to build Android !
 Minimum requirements for A14 are : 12 cores, 64Gb of RAM and 64 bit system.
