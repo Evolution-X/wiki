@@ -1,7 +1,7 @@
 # Maintainers Code Of Conduct
 
 > Heavily WIP for CoC v2.0, check back for any updates.
-> {.is-warning}
+{.is-warning}
 
 ## **Clause 0 - The Community Build Act**
 

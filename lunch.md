@@ -1,13 +1,13 @@
 > **23/02/2024**
 > **FROM NOW ON, FOR ANDROID 15, YOU NEED TO DO `lunch lineage_$device-ap4a-$build_type`.**
-> {.is-danger}
+{.is-danger}
 
 Every time a release will change (E.g. changing from `ap3a` to `ap4a`) I will update the wiki. If you find out it's not
 up-to-date, feel free to ping me on discord @onelots
 or [edit this page](https://github.com/Evolution-X/wiki/edit/main/lunch.md).
 
 > Since I will not update the whole wiki every time, I'll use `$release` instead of specifying the actual release.
-> {.is-info}
+{.is-info}
 
 **As of Now : Release is :**
 
@@ -22,7 +22,7 @@ We'll see how to set up a device for building too.
 
 > Please check [Setup Environment](/setting-up-env) before starting. A minimum git knowledge is required.
 > Besides, make sure the disk you will work on is formatted with **Ext4**.
-> {.is-warning}
+{.is-warning}
 
 # 1: Unofficial build
 
@@ -40,10 +40,10 @@ In this file, we'll add all the trees we need. It usually depends on the device 
 I say tree(s) because sometimes, a device shares commons trees with other devices using the same CPU, for example.
 
 > During all this guide, we'll use Polaris (Xiaomi Mi Mix 2s) as an example.
-> {.is-info}
+{.is-info}
 
 > Quick tip: if a device is supported by LineageOS, look into lineage.dependencies, usually everything is in it !
-> {.is-success}
+{.is-success}
 
 ---
 
@@ -96,7 +96,7 @@ We tell the `repo sync` command to clone https://github.com/lineageos/android_de
 ---
 
 > `<device>.xml` will need to be located under `.repo/local_manifests/<device>.xml`
-> {.is-warning}
+{.is-warning}
 
 When your device.xml is written, and in the right directory, simply sync the sources:
 
@@ -120,7 +120,7 @@ lunch lineage_polaris-$release-userdebug
 ```
 
 > If everything went well, `m evolution` will start the build.
-> {.is-success}
+{.is-success}
 
 ---
 
@@ -131,7 +131,7 @@ Now that you have been granted access to your device's trees, you can set up the
 
 > When you are an official maintainer, you don't need device.xml anymore since everything will be synced automatically
 > when lunch command is called.
-> {.is-info}
+{.is-info}
 
 EvolutionX uses the same system as LineageOS for syncing dependencies automatically without having to rewrite the
 device.xml every time.
@@ -160,7 +160,7 @@ Looking at the `evolution.dependencies` in this repo, we see that it contains al
 the same common tree, so no need to set it up **again**
 
 > In this situation, don't add the trees again ! it will generate a conflict.
-> {.is-danger}
+{.is-danger}
 
 Of course, it may depend. Always check the `lineage.dependencies`, it will contain all you need.
 
@@ -190,7 +190,7 @@ What will change is the `remote`. You have to pick a remote already defined by E
 
 > Remotes are defined by EvolutionX directly, and you can find remotes
 > list [here](https://github.com/Evolution-X/manifest/blob/udc/snippets/evolution.xml).
-> {.is-info}
+{.is-info}
 
 When it's done, simply lunch
 
@@ -201,7 +201,7 @@ lunch lineage_$device-$release-$build_type
 This command will clone everything for you directly !
 
 > This is explained [here](/onboarding) too.
-> {.is-success}
+{.is-success}
 
 # 3: A quick memo about the build args
 
@@ -233,7 +233,7 @@ lunch lineage_polaris-$release-eng
 ```
 
 > eng build is **NOT** intended for release.
-> {.is-danger}
+{.is-danger}
 
 When it's done:
 

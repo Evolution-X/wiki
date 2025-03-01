@@ -6,7 +6,7 @@ That's right, who doesn't want us to build for their device. However, this is no
 ## Blind builds
 
 > A blind build is the fact of building for a device without having the device to test it.
-> {.is-info}
+{.is-info}
 
 We can't build for your device if **we do not have the said device.**
 Blind building is not appropriate for officially maintained devices and therefore, we do not do it. In order for us to
@@ -16,8 +16,8 @@ Simple as that.
 
 > Be patient. If your device isn't currently maintained, maybe it'll be later if a maintainer manage to get it.
 > You can look for an unofficial build too.
-> {.is-success}
+{.is-success}
 
 > Please **DO NOT** ask us to build for a device. Unless you can buy it for a maintainer willing to do it. As said
 > before, we **WILL NEVER** build for a device we don't own.
-> {.is-warning}
+{.is-warning}

@@ -7,7 +7,7 @@ This page will walk you through the new device maintainer onboarding process!
 > the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of
 > the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your
 > device's codename throughout this process.
-> {.is-info}
+{.is-info}
 
 ## 1. Device repositories & initial installation images
 
@@ -27,7 +27,7 @@ Additionally, provide a list of image names required to be flashed in order to b
 installation images) coming from the stock ROM of your device. (E.g `boot`, `recovery` etc.)
 
 > You **MAY NOT** substitute Evolution X recovery with **TWRP or any of its derivatives (OFOX/PBRP)**
-> {.is-danger}
+{.is-danger}
 
 **Example message using panther:**
 
@@ -131,12 +131,12 @@ And again, this tree has more dependencies:
 ```
 
 > Now you understand why this is called a roomservice **chain**. All the dependencies are +- linked.
-> {.is-success}
+{.is-success}
 
 ## 2: Setting up the environment
 
 > This part assume you've read [Setting up the environment](/setting-up-env) before.
-> {.is-info}
+{.is-info}
 
 Since you are now an official maintainer, you have to make sure your builds are official too.
 
@@ -160,18 +160,18 @@ Maintainers are required to sign all releases
 with [our private keys](https://github.com/Evolution-XYZ/vendor_evolution-priv_keys).
 
 > Note that it has already been explained [here.](/setting-up-env)
-> {.is-info}
+{.is-info}
 
 There are no manual signing steps required.
 Just clone the repository to `$ANDROID_BUILD_TOP/vendor/evolution-priv/keys/` and compile.
 Releases not signed by these keys will be removed from sourceforge without warning.
 
 > Please keep these keys **CONFIDENTIAL**. Be cautious, especially if you're using a shared server!
-> {.is-warning}
+{.is-warning}
 
 > **ANY INTENTIONAL OR ACCIDENTAL LEAK WILL RESULT IN IMMEDIATE REMOVAL FROM THE PROJECT, AND YOU WON'T BE ALLOWED BACK.
 **
-> {.is-danger}
+{.is-danger}
 
 ## 4: Upload to SourceForge
 
@@ -211,7 +211,7 @@ scp vendor_boot.img anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/
 ```
 
 > All these commands assume you already have the corresponding folder created on sourceforge.
-> {.is-info}
+{.is-info}
 
 ## 5: Create an XDA thread
 
@@ -235,7 +235,7 @@ The contents must match that of the uploaded build! If the device is not current
 codename.json will look similar to the example below.
 
 > it is up to you to fill out the unpopulated fields and create a codename.txt changelog.
-> {.is-info}
+{.is-info}
 
 Subsequent jsons in `$ANDROID_BUILD_TOP/out/target/product/codename/codename.json` will be fully populated using
 `$ANDROID_BUILD_TOP/evolution/OTA/codename.json` after your initial commit to OTA has been merged, allowing you to *
@@ -246,7 +246,7 @@ Subsequent jsons in `$ANDROID_BUILD_TOP/out/target/product/codename/codename.jso
 **Adding** a device : `OTA: Add Google Pixel 7 (panther)`
 **Updating** single device: `Panther: 08/24/2024 Update`
 **Updating** multiple device: `Panther/Cheetah/Lynx: 08/24/2024 Update`
-> {.is-warning}
+{.is-warning}
 
 Example codename.json name using `panther` :
 
@@ -282,7 +282,7 @@ Example codename.json name using `panther` :
 ```
 
 > If needed, **super_empty** image has to be put on top of the list !
-> {.is-info}
+{.is-info}
 
 Example :
 

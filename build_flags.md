@@ -11,7 +11,7 @@ add some things to it, please send a message to Onelots on discord.
 
 > A flag is often used in the `lineage_$device.mk` file in your device tree.
 > A flag follows the form `FLAG := value`
-> {.is-info}
+{.is-info}
 
 ## Flags list
 

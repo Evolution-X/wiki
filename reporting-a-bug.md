@@ -4,10 +4,10 @@ Aaaaah, bugs. Yes, it is annoying. But how to fight against it ?
 
 > Disclaimer: 99% of the time, **we are aware of the bugs.**
 > Kindly check your XDA thread/telegram group before reporting it to your maintainer.
-> {.is-warning}
+{.is-warning}
 
 > **PLEASE AVOID SPAMMING.** It will only lead to your ban.
-> {.is-danger}
+{.is-danger}
 
 ## I've found a bug ! What should I do ?
 
@@ -23,7 +23,7 @@ Here is a list of things you can do before rushing to talk with your maintainer 
 Okay, maybe your bug is unknown. You should report it to your maintainer obviously, but there is a way to do so !
 
 > Maintainers need real **bugs report**, not just **complaints**.
-> {.is-success}
+{.is-success}
 
 If you want to please your maintainer, here is how you should make a bug report.
 
@@ -39,7 +39,7 @@ If you want to please your maintainer, here is how you should make a bug report.
 
 > Tip: when an application crashes, you can get a **log link** ! Actually, the crash log will be sent to our server to
 > make the bug report easier.
-> {.is-info}
+{.is-info}
 ---
 
 **How can I take a logcat?**

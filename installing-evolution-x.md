@@ -2,7 +2,7 @@
 
 > This guide provides **basic** instructions for installing our ROM. **Always check** your
 > device's [XDA thread](https://xdaforums.com) for specific exceptions.
-> {.is-warning}
+{.is-warning}
 
 ## 1: First time install
 
@@ -17,7 +17,7 @@ To get started, you will need to download the ROM for your device. It is importa
 your device.
 
 > Do not flash builds for other devices, it will brick your device!
-> {.is-danger}
+{.is-danger}
 
 You can download the ROM zip from various sources.
 
@@ -31,7 +31,7 @@ To do so, you can visit our website and check if your device is available.
 
 > If you can't find your device, it doesn't mean that no one did it outside EvoX . It's called an "Unofficial build" and
 > it may work. That said, we won't provide any support for it.
-> {.is-info}
+{.is-info}
 
 ### Selecting the correct vendor ###
 
@@ -51,11 +51,11 @@ Flash the required vendor/firmware and the downloaded ROM build. Reboot to syste
 
 > Once again, the instructions provided here are **only for reference**; you should **ALWAYS** follow the instructions
 > on the XDA thread.
-> {.is-warning}
+{.is-warning}
 
 > Since our new website (available [here](https://evolution-x.org/downloads)), instructions are given for each device.
 > Please check it if you want to know how to flash the rom for your device !
-> {.is-success}
+{.is-success}
 
 ### Rooting your device ###
 
@@ -66,13 +66,13 @@ There are many ways to root a device, and we won't provide support for it. That 
 - [Kernel SU](https://kernelsu.org/)
 
 > Each method can be supported, or may not be ! Always ask people having the same device as you.
-> {.is-info}
+{.is-info}
 
 ## 2: Updating EvolutionX
 
 > As usual, **Always** check what your device's group/XDA thread says about it.
 > Sometimes, **updates may break your system** so stay tuned when an update is out.
-> {.is-warning}
+{.is-warning}
 
 ### 1: OTA Updates
 
@@ -110,7 +110,7 @@ the same time.
 > Depending on the build type, the sideload process can be "stuck" but it's **normal** !
 > • A userdebug build will stop around 47%
 > • A user build will stop around 97%
-> {.is-success}
+{.is-success}
 
 ### 3: Update from internal storage
 
@@ -132,4 +132,4 @@ Only a few roms (GrapheneOS for example) and only a few devices (some Pixels, an
 safely. Otherwise, you will only brick your device, and it'll be a REALLY COMPLICATED situation.
 
 > Please, never re-lock your bootloader while being on EvoX. You'll lose your device forever.
-> {.is-danger}
+{.is-danger}

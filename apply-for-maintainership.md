@@ -11,7 +11,7 @@ can find everything important related below.
 [XDA Thread Template](https://github.com/Evolution-X/XDA/tree/udc) | [Devices Repository](https://github.com/Evolution-X-Devices)
 
 > Before you submit an application to become a maintainer, please check out the followings.
-> {.is-warning}
+{.is-warning}
 
 ### To become a maintainer of Evolution X:
 
@@ -40,4 +40,4 @@ Please visit [this page](https://wiki.evolution-x.org/code-of-conduct) and make 
 
 > We reserve the right to reject your application for any reason. In the case of being rejected, we will most likely not
 > contact you.
-> {.is-info}
+{.is-info}

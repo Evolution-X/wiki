@@ -4,10 +4,10 @@ This guide is for __Linux Users__ targeting Ubuntu 22.04 LTS users.
 
 > Make sure you have the appropriate performance requirements to build Android !
 > Minimum requirements for A14 are : 12 cores, 64Gb of RAM and 64-bit system.
-> {.is-warning}
+{.is-warning}
 
 > This guide has been tested to work on WSL 2 Ubuntu 24.04.1 LTS
-> {.is-info}
+{.is-info}
 
 
 **Don't want to go through hassles? Introduce [akhilnarang's script](https://github.com/akhilnarang/scripts) repository.
@@ -30,7 +30,7 @@ after you've done these commands you can skip to [Step 3](#h-3-make-a-folder-and
 
 > Android builds are typically done on Ubuntu LTS (like 22.04), which has the necessary tools. A 64-bit system
 > architecture and CPU are required for building Android
-> {.is-info}
+{.is-info}
 
 ## 2: Installing required packages ##
 
@@ -58,7 +58,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 > You can find EvolutionX's manifest [right here](https://github.com/Evolution-X/manifest)
-> {.is-info}
+{.is-info}
 
 ## 4: Source the Build Environment
 
@@ -80,7 +80,7 @@ Run this command to load the necessary tools required for building.
 
 > Without this, your build won't be able to pass DEVICE or BASIC integrity.
 > Remember to **BACK UP** your keys !
-> {.is-danger}
+{.is-danger}
 
 ### First case: Unofficial Build: ###
 
@@ -108,14 +108,14 @@ croot && git clone https://github.com/Evolution-X/vendor_evolution-priv_keys ven
 > If any of you leak this, whether that be intentionally, or on accident, you will be removed from the project and never
 > allowed back. So, if you use a shared server, be careful, otherwise it could very well mean the end of your time at
 > Evolution X
-> {.is-warning}
+{.is-warning}
 
 ## 6: Building ##
 
 ### A: Note for official maintainers
 
 > Skip this part if you are not an official maintainer.
-> {.is-danger}
+{.is-danger}
 
 In the case where you are an official maintainer, please remember to set up the build type !
 
@@ -142,7 +142,7 @@ lunch lineage_$device-$release-userdebug
 ```
 
 > Kindly visit [the lunch page](/lunch) to learn about the lunch command.
-> {.is-info}
+{.is-info}
 
 Using Sargo as an example, building AP4A release, the command would be `lunch lineage_sargo-ap4a-userdebug`.
 
@@ -157,7 +157,7 @@ And the build will start.
 ---
 
 > That's all you need to do! You're good to compile the build and #KeepEvolving!
-> {.is-success}
+{.is-success}
 
 
 **Reference**

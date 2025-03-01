@@ -25,7 +25,7 @@ Let's get started!
   gains.
 
 > Major version is currently `10` (VIC/Android 15).
-> {.is-success}
+{.is-success}
 
 # Evolution X Related Links
 
