@@ -37,7 +37,7 @@ after you've done these commands you can skip to [Step 3](#h-3-make-a-folder-and
 A 64-bit version of Ubuntu (22.04 is recommended as of now because of LTS).
 
 ```bash
-sudo apt update && sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev lib32ncurses5-dev libncurses5 libncurses5-dev python-is-python3
+sudo apt update && sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip unzip zlib1g-dev lib32ncurses5-dev libncurses5 libncurses5-dev python-is-python3
 ```
 
 ## 3: Make A Folder And Initialize Repo ##
