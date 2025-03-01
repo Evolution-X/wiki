@@ -2,7 +2,7 @@
 
 This page will walk you through the new device maintainer onboarding process!
 
-> References to "**us**" or "**we**" mean [Joey](https://github.com/joeyhuab) or [Anierin](https://github.com/AnierinBliss) in the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your device's codename throughout this proccess.
+> References to "**us**" or "**we**" mean [Joey](https://github.com/joeyhuab) or [Anierin](https://github.com/AnierinBliss) in the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your device's codename throughout this process.
 {.is-info}
 
 ## 1. Device repositories & initial installation images
@@ -71,7 +71,7 @@ We'll use Panther again as an example.
 ]
 ```
 
-As previously said in [lunch guide](/lunch), we can see that Panther has only 1 dependencie, which is Pantah.
+As previously said in [lunch guide](/lunch), we can see that Panther has only 1 dependency, which is Pantah.
 Pantah contains the dependencies for building Pantah and Panther.
 
 `device_google_pantah` :
@@ -89,7 +89,7 @@ Pantah contains the dependencies for building Pantah and Panther.
 ]
 ```
 
-But we can see that Pantah itself has a dependencie, `device_google_gs201`, common to both devices.
+But we can see that Pantah itself has a dependency, `device_google_gs201`, common to both devices.
 
 `device_google_gs201` :
 ```json

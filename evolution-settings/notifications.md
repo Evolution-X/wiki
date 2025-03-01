@@ -5,7 +5,7 @@
 ## General
 
 ### Heads up
-Pop up statusbar notification
+Pop up status bar notification
 
 ### Notification light
 Edit notification light settings by apps
@@ -53,7 +53,7 @@ Show a dialog when an application crashes
 Force apps that support expanded notifications
 
 ### Kill app button
-Show a kill app button in the notification's longpress menu
+Show a kill app button in the notification's long press menu
 
 
 ## Notification option
