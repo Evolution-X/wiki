@@ -21,7 +21,8 @@ Let's get started!
 
 ### 📊 Technical information
 
-- Since 06/2024, **EvolutionX** is now based on [LineageOS](https://lineageos.org/) for more stability and performances gains.
+- Since 06/2024, **EvolutionX** is now based on [LineageOS](https://lineageos.org/) for more stability and performances
+  gains.
 
 > Major version is currently `10` (VIC/Android 15).
 {.is-success}
@@ -30,7 +31,8 @@ Let's get started!
 
 - [<img src="/favicons/sfav.png" alt="sitefav" style="width:20px; vertical-align:middle;"> Website](https://evolution-x.org)
 - [<img src="/favicons/sfav.svg" alt="sitefav" style="width:20px; vertical-align:middle;"> SourceForge](https://sourceforge.net/projects/evolution-x/files/)
-- [<img src="/favicons/sfav.png" alt="sitefav" style="width:20px; vertical-align:middle;"> Mirror](https://evolution-x.org) (*Currently under tests*)
+- [<img src="/favicons/sfav.png" alt="sitefav" style="width:20px; vertical-align:middle;"> Mirror](https://evolution-x.org) (
+  *Currently under tests*)
 - [<img src="/favicons/difav.svg" alt="ghfav" style="width:20px; vertical-align:middle;"> Discord](https://discord.gg/evolution-x)
 - [<img src="/favicons/xfav.png" alt="ghfav" style="width:20px; vertical-align:middle;"> Twitter](https://twitter.com/EvolutionXROM)
 - [<img src="/favicons/tlgfav.png" alt="tlgfav" style="width:20px; vertical-align:middle;"> Telegram](https://t.me/EvolutionXOfficial)

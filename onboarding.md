@@ -1,26 +1,36 @@
 # Congratulations & welcome to the Evolution X team! <img src="/reimu.gif" alt="sitefav" style="width:40px; vertical-align:middle;">
 
-This page will walk you through the new device maintainer onboarding proccess!
+This page will walk you through the new device maintainer onboarding process!
 
-> References to "**us**" or "**we**" mean [Joey](https://github.com/joeyhuab) or [Anierin](https://github.com/AnierinBliss) in the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your device's codename throughout this proccess.
+> References to "**us**" or "**we**" mean [Joey](https://github.com/joeyhuab)
+> or [Anierin](https://github.com/AnierinBliss) in
+> the [#maintainers](https://discord.com/channels/670512508871639041/830748686773387275) channel of
+> the [Evolution X Discord server](https://discord.gg/evolution-x). The usage of `codename` should be replaced with your
+> device's codename throughout this process.
 {.is-info}
 
 ## 1. Device repositories & initial installation images
 
 Once you'll be accepted as an official maintainer, please provide us:
+
 - Your [SourceForge](https://sourceforge.com) username
 - Your [GitHub](https://github.com) username
 
-Specify the repositories you need created or access to under the [Evolution X Devices GitHub organization](https://github.com/evolution-X-devices)
+Specify the repositories you need created or access to under
+the [Evolution X Devices GitHub organization](https://github.com/evolution-X-devices)
 
-Once these repositories are created, and you have been granted access and pushed, please delete `lineage.dependencies` (if existing) and set up `evolution.dependencies` in each applicable repository for device source syncing via [roomservice](https://github.com/Evolution-XYZ/vendor_evolution/blob/udc/build/tools/roomservice.py).
+Once these repositories are created, and you have been granted access and pushed, please delete `lineage.dependencies` (
+if existing) and set up `evolution.dependencies` in each applicable repository for device source syncing
+via [roomservice](https://github.com/Evolution-XYZ/vendor_evolution/blob/udc/build/tools/roomservice.py).
 
-Additionally, provide a list of image names required to be flashed in order to boot Evolution X recovery (initial installation images) coming from the stock ROM of your device. (E.g `boot`, `recovery` etc)
+Additionally, provide a list of image names required to be flashed in order to boot Evolution X recovery (initial
+installation images) coming from the stock ROM of your device. (E.g `boot`, `recovery` etc.)
 
 > You **MAY NOT** substitute Evolution X recovery with **TWRP or any of its derivatives (OFOX/PBRP)**
 {.is-danger}
 
 **Example message using panther:**
+
 ```md
 # Device:
 Device name: Google Pixel 7
@@ -58,10 +68,11 @@ SourceForge Username: anierin
 
 ### Roomservice chain ###
 
-Here is an example of how to setup the roomservice chain (mentionned in [lunch guide](/lunch).)
+Here is an example of how to set up the roomservice chain (mentioned in [lunch guide](/lunch).)
 We'll use Panther again as an example.
 
 `device_google_panther` :
+
 ```json
 [
   {
@@ -71,10 +82,11 @@ We'll use Panther again as an example.
 ]
 ```
 
-As previously said in [lunch guide](/lunch), we can see that Panther has only 1 dependencie, which is Pantah.
+As previously said in [lunch guide](/lunch), we can see that Panther has only 1 dependency, which is Pantah.
 Pantah contains the dependencies for building Pantah and Panther.
 
 `device_google_pantah` :
+
 ```json
 
   {
@@ -89,9 +101,10 @@ Pantah contains the dependencies for building Pantah and Panther.
 ]
 ```
 
-But we can see that Pantah itself has a dependencie, `device_google_gs201`, common to both devices.
+But we can see that Pantah itself has a dependency, `device_google_gs201`, common to both devices.
 
 `device_google_gs201` :
+
 ```json
 [
   {
@@ -100,7 +113,8 @@ But we can see that Pantah itself has a dependencie, `device_google_gs201`, comm
   }
 ]
 ```
-And again, this tree has an other dependencies:
+
+And again, this tree has more dependencies:
 `device_google_gs101` :
 
 ```json
@@ -132,8 +146,8 @@ In order to set it up, you only have to
 export EVO_BUILD_TYPE=Official
 ```
 
-In order to set it up, you only have to
-To make sure it's applied every time, you can add it at the end of your `~/.bashrc` file:
+In order to set it up, you only have to make sure it's applied every time, you can add it at the end of your `~/.bashrc`
+file:
 
 ```bash
 echo 'export EVO_BUILD_TYPE=Official' >> ~/.bashrc
@@ -142,7 +156,8 @@ source ~/.bashrc
 
 ## 3: Signed Releases
 
-Maintainers are required to sign all releases with [our private keys](https://github.com/Evolution-XYZ/vendor_evolution-priv_keys).
+Maintainers are required to sign all releases
+with [our private keys](https://github.com/Evolution-XYZ/vendor_evolution-priv_keys).
 
 > Note that it has already been explained [here.](/setting-up-env)
 {.is-info}
@@ -154,37 +169,43 @@ Releases not signed by these keys will be removed from sourceforge without warni
 > Please keep these keys **CONFIDENTIAL**. Be cautious, especially if you're using a shared server!
 {.is-warning}
 
-> **ANY INTENTIONAL OR ACCIDENTAL LEAK WILL RESULT IN IMMEDIATE REMOVAL FROM THE PROJECT, AND YOU WON'T BE ALLOWED BACK.**
+> **ANY INTENTIONAL OR ACCIDENTAL LEAK WILL RESULT IN IMMEDIATE REMOVAL FROM THE PROJECT, AND YOU WON'T BE ALLOWED BACK.
+**
 {.is-danger}
-
 
 ## 4: Upload to SourceForge
 
-Maintainers are responsible for uploading **releases** and **initial installation images** to [SourceForge](https://sourceforge.net/projects/evolution-x/files/).
+Maintainers are responsible for uploading **releases** and **initial installation images**
+to [SourceForge](https://sourceforge.net/projects/evolution-x/files/).
 
 ### Example using Panther:
 
 **`ROM` uploading** :
+
 ```bash
 scp EvolutionX-14.0-20240724-panther-v9.2-Official.zip anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/14/
 ```
 
 **`boot.img` uploading** :
+
 ```bash
 scp EvolutionX-14.0-20240724-panther-v9.2-Official.zip anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/14/
 ```
 
 **`dtbo.img` uploading** :
+
 ```bash
 scp dtbo.img anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/14/dtbo/
 ```
 
 **`vendor_kernel_boot.img` uploading** :
+
 ```bash
 scp vendor_kernel_boot.img anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/14/vendor_kernel_boot/
 ```
 
 **`vendor_boot.img` uploading** :
+
 ```bash
 scp vendor_boot.img anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/14/vendor_boot/
 ```
@@ -194,26 +215,34 @@ scp vendor_boot.img anierin@frs.sourceforge.net:/home/frs/p/evolution-x/panther/
 
 ## 5: Create an XDA thread
 
-Create an [XDA forums thread](https://xdaforums.com/all-forums-by-manufacturer) using the `$ANDROID_BUILD_TOP/evolution/XDA/generate_xda_thread.sh` script found in the [XDA repository](https://github.com/Evolution-X/XDA).
+Create an [XDA forums thread](https://xdaforums.com/all-forums-by-manufacturer) using the
+`$ANDROID_BUILD_TOP/evolution/XDA/generate_xda_thread.sh` script found in
+the [XDA repository](https://github.com/Evolution-X/XDA).
 
 ```bash
 croot && cd evolution/XDA/ && . generate_xda_thread.sh
 ```
 
-*Please be aware that you will need to **manually** update the **installation instructions** to reflect the procedure **specific to your device**. The ability to automatically update these instructions during the generation script will be added in the **future**.*
+*Please be aware that you will need to **manually** update the **installation instructions** to reflect the
+procedure **specific to your device**. The ability to automatically update these instructions during the generation
+script will be added in the **future**.*
 
 ## 6: Add your device to OTA
 
-Fork the [OTA](https://github.com/Evolution-X/OTA) repository and add your device using the json located at `$ANDROID_BUILD_TOP/out/target/product/codename/codename.json`.
-The contents must match that of the uploaded build! If the device is not currently in the OTA repository, your codename.json will look similar to the example below.
+Fork the [OTA](https://github.com/Evolution-X/OTA) repository and add your device using the json located at
+`$ANDROID_BUILD_TOP/out/target/product/codename/codename.json`.
+The contents must match that of the uploaded build! If the device is not currently in the OTA repository, your
+codename.json will look similar to the example below.
 
 > it is up to you to fill out the unpopulated fields and create a codename.txt changelog.
 {.is-info}
 
-Subsequent jsons in `$ANDROID_BUILD_TOP/out/target/product/codename/codename.json` will be fully populated using `$ANDROID_BUILD_TOP/evolution/OTA/codename.json` after your initial commit to OTA has been merged, allowing you to **directly copy/paste.**
+Subsequent jsons in `$ANDROID_BUILD_TOP/out/target/product/codename/codename.json` will be fully populated using
+`$ANDROID_BUILD_TOP/evolution/OTA/codename.json` after your initial commit to OTA has been merged, allowing you to *
+*directly copy/paste.**
 
 > Please **respect the format** when making a PR for OTA !
-Examples:
+> Examples:
 **Adding** a device : `OTA: Add Google Pixel 7 (panther)`
 **Updating** single device: `Panther: 08/24/2024 Update`
 **Updating** multiple device: `Panther/Cheetah/Lynx: 08/24/2024 Update`
@@ -262,11 +291,11 @@ Example :
         "super_empty",
         "recovery",
         "other image..."
-      ]
+]
 ```
 
-
-When done, commit, push, and submit a pull request via **[comparing forks](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits#comparing-across-forks)** with the main OTA repository; we will review and merge it **at our earliest convenience.**
-
+When done, commit, push, and submit a pull request via *
+*[comparing forks](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits#comparing-across-forks)
+** with the main OTA repository; we will review and merge it **at our earliest convenience.**
 
 ![keepevolving.png](/keepevolving.png)
