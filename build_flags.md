@@ -6,11 +6,12 @@ When you build, you will often need some specific flags, depending on the situat
 
 Here, we'll try to establish a __non-exhaustive__ list of what flags you can find.
 
-It's an effort made by the community to try to gather the flags. If you find this section incomplete, or if you want to add some things to it, please send a message to Onelots on discord.
+It's an effort made by the community to try to gather the flags. If you find this section incomplete, or if you want to
+add some things to it, please send a message to Onelots on discord.
 
 > A flag is often used in the `lineage_$device.mk` file in your device tree.
 > A flag follows the form `FLAG := value`
-{.is-info}
+> {.is-info}
 
 ## Flags list
 

@@ -1,7 +1,9 @@
 # [Evolution-X wiki](https://wiki.evolution-x.org) resources.
 
 If you want to help, it's quite simple.
-Fork the repo, make your changes, then submit a pull request via [comparing forks](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits#comparing-across-forks) with the main repository; we will review and merge it at our earliest convenience.
+Fork the repo, make your changes, then submit a pull request
+via [comparing forks](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits#comparing-across-forks)
+with the main repository; we will review and merge it at our earliest convenience.
 
 ## Warning :
 
