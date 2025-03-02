@@ -1,0 +1,30 @@
+import { Callout } from "nextra/components";
+
+# Build flags.
+
+## Disclaimer and Informations.
+
+When you build, you will often need some specific flags, depending on the situation.
+
+Here, we'll try to establish a **non exhaustive** list of what flags you can find.
+
+It's an effort made by the community to try to gather the flags. If you find this section incomplete, or if you want to add some things to it, please send a message to Onelots on discord.
+
+<Callout>
+  A flag is often used in the `lineage_$device.mk` file in your device tree. A
+  flag follows the form `FLAG := value`
+</Callout>
+
+## Flags list
+
+|          Flag itself           | Default value |   Accepted value    |                                                                      What it's made for                                                                       |
+| :----------------------------: | :-----------: | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|         EVO_BUILD_TYPE         |  Unofficial   | Official/Unofficial |                                   Define if a build is official or unofficial. allowed as flag but prefer to use as export.                                   |
+|            WITH_GMS            |     True      |     true/false      |                                        Define if the build has Google Apps or if it's a vanilla one. (Without google.)                                        |
+|     TARGET_USES_MINI_GAPPS     |     False     |     true/false      |                       It often happens that a device can't fit all the google apps. So we use this flag to use a smaller gapps package.                       |
+|     TARGET_USES_PICO_GAPPS     |     False     |     true/false      |                        Same as MINI_GAPPS, but this one is the smallest working one. Not recommended tho because doesn't have Velvet.                         |
+|           BUILD_BCR            |     true      |     true/false      |                                                     Allows to build (or not) the app Basic Call Recorder                                                      |
+|        TARGET_HAS_UDFPS        |   depends !   |     true/false      |                                  indicate wether the devices has **U**nder **D**isplay **F**inger**P**rint **S**ensor or not                                  |
+| TARGET_SUPPORT_BOOT_ANIMATIONS |     true      |     true/false      |                          Allows to define if boot animations are working on the device or not, and allows to hide options in evolver                          |
+|      TARGET_DISABLE_EPPE       |     false     |     true/false      |    **E**nforce **P**roduct **P**ackages **E**xistance. EPPE Requires all requested packages to exist, so disabling it allows some packages to be missing.     |
+|     TARGET_INCLUDE_ACCORD      |     true      |     true/false      | Allows to define if the build will include [Accord app](https://github.com/FoedusProgramme/Accord). Accord is a music player with apple music like interface. |

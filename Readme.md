@@ -11,8 +11,7 @@ Please keep in mind some things won't work with your favorite markdown editor, b
 For example,
 
 ```markdown
-> This is a blockquote
-{.is-danger}
+<Callout type="error"> This is a blockquote</Callout>
 ```
 
 This will probably not work in your markdown editor.
@@ -38,3 +37,19 @@ Example :
 ```
 
 Then you have to place your image under `Assets/favicons/gfav.png`
+
+## Evolution Settings Script
+
+The `generate_settings.py` script fetches preferences in [`res/xml`](https://github.com/Evolution-X/packages_apps_Evolver/tree/vic/res/xml) and converts them to Markdown.
+
+1. Install modules
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the generator
+
+```bash
+py ./generate_settings.py
+```
