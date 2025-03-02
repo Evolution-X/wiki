@@ -1,4 +1,5 @@
 import { Callout } from "nextra/components";
+import SuccessCallout from "../app/components/SuccessCallout";
 
 # Setting up Environments to build Evolution X
 
@@ -79,8 +80,12 @@ Run this command to load the necessary tools required for building.
 ```
 
 <Callout type="info">
-  You can add this in your `.bashrc` to automatically run it: ``` echo 'cd evo
-  && source build/envsetup.sh && cd' >> ~/.bashrc ```
+  You can add this in your `.bashrc` to automatically run it:
+  
+```
+echo 'cd evo && source build/envsetup.sh && cd' >> ~/.bashrc
+```
+
 </Callout>
 
 ## 5: The Keys.
@@ -166,9 +171,9 @@ And the build will start.
 
 ---
 
-<Callout type="success">
+<SuccessCallout>
   That's all you need to do! You're good to compile the build and #KeepEvolving!
-</Callout>
+</SuccessCallout>
 
 **Reference**
 

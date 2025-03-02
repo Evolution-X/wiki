@@ -15,6 +15,11 @@ export default function SuccessCallout({ children }: { children: ReactNode }) {
         "x:contrast-more:border-current!",
         "x:border-green-100 x:bg-green-50 x:text-green-900 x:dark:border-green-200/30 x:dark:bg-green-700/30 x:dark:text-green-200"
       )}
+      style={{
+        borderColor: "#3fb95090",
+        backgroundColor: "#3fb95050",
+        color: "#bfe8c5",
+      }}
     >
       <div
         className="x:select-none x:text-xl x:ps-3 x:pe-2"
