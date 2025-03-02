@@ -18,7 +18,7 @@ Every time a release will change (E.g changing from `ap3a` to `ap4a`) I will upd
 
 ![ap4a.png](/ap4a.png)
 
-So commands will be in the form <LunchCommand>lunch lineage\_$device-$release-$build_type</LunchCommand>.
+So commands will be in the form `lunch lineage_$device-$release-$build_type{:bash}`.
 
 # A quick lunch guide
 
@@ -84,10 +84,13 @@ Here is the classic structure of a `.xml` (in this case, like I said, for Polari
 
 Let's explain what is in here:
 
-```xml
-<!--Remotes-->
+```xml filename=".repo/local_manifests/polaris.xml" {3, 4}
+<manifest>
+    <!--Remotes-->
     <remote name="los"            fetch="https://github.com/LineageOS"           revision="lineage-21" />
     <remote name="muppets"        fetch="https://github.com/TheMuppets"          revision="lineage-21" />
+    <!-- ... -->
+</manifest>
 ```
 
 These lines tells the `repo sync` command where to look for when syncing dependencies. The remotes are the roots of where `repo sync` will have to look for.
@@ -95,7 +98,11 @@ These lines tells the `repo sync` command where to look for when syncing depende
 If we look closer at this line for example:
 
 ```xml
-<project name="android_device_xiaomi_polaris"           path="device/xiaomi/polaris"       remote="los" />
+<project
+  name="android_device_xiaomi_polaris"
+  path="device/xiaomi/polaris"
+  remote="los"
+/>
 ```
 
 We tell the `repo sync` command to clone https://github.com/lineageos/android_device_xiaomi_polaris into the `device/xiaomi/polaris` folder.
@@ -114,8 +121,12 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 And everything will be retrieved. Then you only need to:
 
-<LunchCommand type="codeblock">
-  lunch lineage_$device-$release-$build_type
+<LunchCommand>
+
+```bash
+lunch lineage_$device-$release-$build_type
+```
+
 </LunchCommand>
 
 Where `$device` is your device's codename and `$build_type` is the build type. There is a paragraph about it at the end of this guide, we'll come back to it later.

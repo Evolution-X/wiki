@@ -1,45 +1,32 @@
-import { useMDXComponents } from "nextra-theme-docs";
-import type { ReactNode } from "react";
-import { Children, isValidElement } from "react";
+"use client";
 
-export function LunchCommand({
-  children,
-  type,
-  language = "bash",
-}: {
-  children: ReactNode;
-  type: "codeblock" | "inline";
-  language?: string;
-}) {
-  const components = useMDXComponents();
-  const Code = type === "codeblock" ? components.pre : components.code;
+import { Button } from "nextra/components";
+import type { FC, ReactNode } from "react";
+import { useEffect, useRef } from "react";
 
-  let text = "";
+// From https://github.com/shuding/nextra/blob/main/docs/app/docs/guide/syntax-highlighting/_dynamic-code.tsx
+export const LunchCommand: FC<{ children: ReactNode }> = ({ children }) => {
+  const ref = useRef<HTMLDivElement>(null!);
+  const tokenRef = useRef<HTMLSpanElement>(undefined);
+  // Find the corresponding token from the DOM
+  useEffect(() => {
+    tokenRef.current = [
+      //@ts-ignore
+      ...ref.current.querySelectorAll<HTMLSpanElement>("code > span > span"),
+    ].find((el) => el.textContent === "$release");
+  }, []);
 
-  if (typeof children === "string") {
-    text = children;
-  } else if (
-    isValidElement(children) &&
-    typeof (children as { props: { children: string } }).props.children ===
-      "string"
-  ) {
-    text = (children as { props: { children: string } }).props.children;
-  } else {
-    text = Children.toArray(children)
-      .map((child) => (typeof child === "string" ? child : ""))
-      .join("");
-  }
+  useEffect(() => {
+    if (tokenRef.current) {
+      tokenRef.current.textContent = "ap4a";
+    }
+  }, [tokenRef.current]);
 
-  if (type === "codeblock" && language) {
-    const NextraCode = components.code;
-    return (
-      <Code data-copy="" data-language={language}>
-        <NextraCode data-language={language}>
-          {text.replaceAll("$release", "ap4a")}
-        </NextraCode>
-      </Code>
-    );
-  }
-
-  return <Code>{text.replaceAll("$release", "ap4a")}</Code>;
-}
+  return (
+    <>
+      <div ref={ref} className="mt-10">
+        {children}
+      </div>
+    </>
+  );
+};
