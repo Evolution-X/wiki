@@ -1,0 +1,134 @@
+import { Callout } from "nextra/components";
+
+# Maintainers Code Of Conduct
+
+<Callout type="warning">
+  Heavily WIP for CoC v2.0, check back for any updates.
+</Callout>
+
+## **Clause 0 - The Community Build Act**
+
+| **Act 1:** Link shorteners that leads to advertisement are not allowed.
+
+> **Act 1.2:** However, it is allowed to request for donation for the hard work.
+
+| **Act 2:** Do not publish a community build if there is already an active maintainer for the particular device.
+
+> **Act 2.2:** The act above could be overruled by the maintainer.
+>
+> In addition, a community build maintainer can be appointed to maintain on the occasion that the official maintainer cannot publish a build for that particular month.
+
+---
+
+## **Clause 1 - The Community Well-Being Act**
+
+| **Act 1:** Maintainer must maintain a good reputation with the community.
+| **Act 2:** Maintainer must not act disrespectful toward others.
+| **Act 3:** Maintainer must maintain a good reputation with the other maintainers.
+
+---
+
+## **Clause 2 - The Build Act**
+
+| **Act 1:** Maintainer must not modify ROM sources in any way when releasing builds as OFFICIAL. If caught doing so, maintainership will be revoked without warning.
+
+> **Act 1.2:** Maintainer can modify ROM source if allowed to. [By this term it mostly mean modify source to support the device and not with the purpose to add features to the ROM source]
+
+| **Act 2:** Maintainer device's tree must not have any changes that interfere with features directly.
+| **Act 3:** Kernel that is provided with the ROM must be opensource as per GPLv3 requirement.
+| **Act 3:** Maintainers are not allowed to block anything from working in their build
+
+---
+
+## **Clause 3 - The Release Act**
+
+| **Act 1:** Maintainer must upload their build, and wait for it to be mirrored before making a pull request or releasing the build.
+| **Act 1.2:** If the maintainer released a build with RC, Beta, or Alpha tag, the maintainer will be allowed to use Google Drive for publishment but will not be pushed to OTA system.
+| **Act 1.3:** Maintainer can only upload flashable "ROM.zip" or fastboot ROM into the project's SourceForge and is not allowed to upload anything other than that.
+| **Act 2:** Maintainer reserves rights to pull-back the builds in any case.
+| **Act 3:** Maintainer must test their build before releasing, if found untested then the maintainer will be warned, and on the second offend, the right to maintainship will be revoked.
+| **Act 4:** Maintainer must follow the following format whenever the maintainer pull request to the [official_devices](https://github.com/evolution-x-devices/official_devices) repo.
+`Device_Codename: Month/Day/Year Update`
+| **Act 5:** Maintainer must make sure their changelogs is appropriate to everyone.
+
+---
+
+## **Clause 4 - The Trees Act**
+
+| **Act 1:** Maintainer's device(s) trees must be in the [device organization](https://github.com/Evolution-X-Devices)
+
+> **Act 1.2:** Act 1 is amendable if the maintainer decides to provide the tree source to the project members to scan.
+
+| **Act 2:** Maintainers must keep the authorship of commits, force-pushes are acceptable.
+| **Act 3:** Maintainers must do the command down below in/against their build environment whenever building **OFFICIAL** so the build will ship OTA Updater, GApps and will be releaseable.
+`export EVO_BUILD_TYPE=OFFICIAL` - in the scripts
+`EVO_BUILD_TYPE := OFFICIAL` - in the Makefile [Not recommended]
+~~| **Act 4:** Maintainers are strictly prohibited from including proprietary applications into their tree, or as dependencies. Binary is OK to be included.
+| **Act 4.1:** Act 4 is amendable if the project members allow it.~~
+| **Act 5:** Please make sure that the device tree does not contain any copyrighted blobs [Example : megvii]
+
+---
+
+## **Clause 5 - The Languages Act**
+
+| **Act 1:** Maintainer's English skill must be understandable.
+| **Act 2:** Maintainer's main language when talking to users shall be in English.
+
+---
+
+## **Clause 6 - The Group Act**
+
+| **Act 1:** Maintainer is strictly prohibited from forwarding any messages from the Maintainer Group without the message(s)'s sender consent.
+
+---
+
+## **Clause 7 - The Rights Act**
+
+| **Act 1:** Maintainer reserves rights to be treated like a human being.
+| **Act 2:** Maintainer reserves rights to vote, and give opinions.
+| **Act 3:** Maintainer reserves rights to leave the project on their own reasons.
+| **Act 4:** Maintainer reserves rights to be Evolution X Devices Federation Administrator after 3 months of being a good maintainer.
+
+---
+
+## **Clause 8 - The Device Group Act**
+
+| **Act 1:** Maintainer is allowed to make their own device group using the format EvolutionX\{codename\} OR other applicable formats endorsed by the project. Be aware that community maintainer cannot use this format.
+| **Act 2:** Maintainer's device group must use [Haruka Aya Bot](https://t.me/HarukaAyaBot) as the group's only group management bot for utility purposes.
+| **Act 3:** Device group MUST NOT be used with other ROMs and should not represent maintainer's personal project or used for any personal interests.
+| **Act 4:** Administrators of the group must not be one of the project's blocklisted individual.
+| **Act 5:** Maintainers can add additional bots in their group as long as it does not conflict with any clauses and acts of this CoC and is deemed appropirate.
+| **Act 6:** Promotion of other ROMs in the device group is strictly prohibited.
+| **Act 7:** No piracy, no encouraging illegal behaviors, and such in the device group.
+
+---
+
+## **Clause 9 - The Federation Act**
+
+| **Act 1:** Maintainer must not fedban anyone without a proper reason and evidences.
+| **Act 2:** Maintainer must not fedban anyone due to a personal fights.
+| **Act 3:** Maintainer will be revoked fedban access if they are found violating the above acts.
+
+---
+
+## **Clause 10 - The Upload Act**
+
+| **Act 1:** Maintainer must not abuse the project's SourceForge by deleting files, etc. If found maintainer access will be revoked without warning.
+| **Act 2:** Maintainer must not upload any other files apart from ROM.zip to project's SourceForge. If found maintainer access will be revoked without warning.
+| **Act 3:** Maintainer must wait for SourceForge to mirror their build before Pull Requesting.
+
+---
+
+## **Clause 11 - The Media Act**
+
+| **Act 1:** You are not allowed to "short ads" or "pling" our builds link, but you're allowed to monetize your content.
+
+---
+
+The project have full rights to revoke the maintainer's maintainship if you violated any of these clauses and acts.
+
+**The project reserves rights to change Code Of Conduct any times, it's the maintainer's responsibility to check the CoC themselves.**
+
+By being the project's maintainer, you have agreed to the following clauses and acts.
+
+See anything wrong? Have a question regarding our CoC? Don't hesitate to mail joey@evolution-x.org
