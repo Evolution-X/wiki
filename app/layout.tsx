@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wiki.evolution-x.org"),
   title: "Evolution X Wiki",
   description: "The official wiki for Evolution X.",
   icons: {
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const banner = (
-  <Banner storageKey="some-key">Evolution X 10 released 🎉</Banner>
+  <Banner storageKey="evolution-x-10-3">Evolution X 10.3 released 🎉</Banner>
 );
 const logo = (
   <svg
@@ -60,7 +61,7 @@ const navbar = (
     // ... Your additional navbar options
   />
 );
-const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>;
+const footer = <Footer>#KeepEvolving</Footer>;
 
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -79,7 +80,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       </Head>
       <body>
         <Layout
-          //banner={banner}
+          //banner={banner} // uncomment to show optional banner
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/Evolution-X/wiki/tree/main"
