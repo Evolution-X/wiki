@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     siteName: "Evolution X Wiki",
     images: [
       {
-        url: "/banner.png",
-        width: 1200,
-        height: 630,
-        alt: "Evolution X Wiki",
+        url: "/keepevolving.png",
+        width: 4888,
+        height: 1622,
+        alt: 'Evolution X\'s Banner "#KeepEvolving"',
       },
     ],
   },
