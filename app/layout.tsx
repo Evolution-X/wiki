@@ -4,10 +4,28 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "material-symbols";
 import "../styles.css";
+import type { Metadata } from "next";
+import type { PropsWithChildren } from "react";
 
-export const metadata = {
-  // Define your metadata here
-  // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+export const metadata: Metadata = {
+  title: "Evolution X Wiki",
+  description: "The official wiki for Evolution X.",
+  icons: {
+    icon: "/icon.svg",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://wiki.evolution-x.org",
+    siteName: "Evolution X Wiki",
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Evolution X Wiki",
+      },
+    ],
+  },
 };
 
 const banner = (
@@ -44,7 +62,7 @@ const navbar = (
 );
 const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>;
 
-export default async function RootLayout({ children }) {
+export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       // Not required, but good for SEO
@@ -57,7 +75,6 @@ export default async function RootLayout({ children }) {
       <Head
       // ... Your additional head options
       >
-        <link rel="icon" href="/icon.svg" />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>
@@ -65,9 +82,9 @@ export default async function RootLayout({ children }) {
           //banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+          docsRepositoryBase="https://github.com/Evolution-X/wiki/tree/main"
           footer={footer}
-          // ... Your additional layout options
+          darkMode
         >
           {children}
         </Layout>

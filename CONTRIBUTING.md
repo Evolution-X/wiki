@@ -33,3 +33,8 @@ bun run dev
 ### What is nextra?
 
 Nextra is a documentation builder that uses Next.js and Markdown. ([MDX](https://mdxjs.com/))
+
+### How does it work?
+
+- Each time the source changes, Cloudflare (or any other host) will redeploy it and generate optimized static pages that are prerendered as static HTML.
+- [MDX](https://mdxjs.com/) is turbocharged Markdown that lets you write interactive JSX components into MDX pages.
