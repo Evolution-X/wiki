@@ -26,7 +26,7 @@ bun run dev
 
 1. Create a [Cloudflare Pages project](https://developers.cloudflare.com/pages/)
 2. The first build **will fail**, this is normal, we'll fix it later
-3. Go to project settings and create a variable: `NODE_VERSION` = `23.7.0`
+3. ~~Go to project settings and create a variable: `NODE_VERSION` = `23.7.0`~~ (cloudflare should use `.node-version`)
 4. Add `nodejs_compat` to compatibility flags
 5. Redeploy your project
 
