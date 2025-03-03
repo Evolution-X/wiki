@@ -15,8 +15,8 @@ export async function generateMetadata(props) {
       type: "website",
       url: "https://wiki.evolution-x.org",
       siteName: "Evolution X Wiki",
-      title: "Evolution X Wiki",
-      description: "The official wiki for Evolution X.",
+      title: metadata.title || "Evolution X Wiki",
+      description: metadata.description || "The official wiki for Evolution X.",
       determiner: "the",
       locale: "en_US",
       images: {
