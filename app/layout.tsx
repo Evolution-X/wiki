@@ -18,14 +18,17 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://wiki.evolution-x.org",
     siteName: "Evolution X Wiki",
-    images: [
-      {
-        url: "/keepevolving.png",
-        width: 4888,
-        height: 1622,
-        alt: 'Evolution X\'s Banner "#KeepEvolving"',
-      },
-    ],
+    title: "Evolution X Wiki",
+    description: "The official wiki for Evolution X.",
+    determiner: "the",
+    locale: "en_US",
+    images: {
+      url: "/keepevolving.png",
+      width: 4888,
+      height: 1622,
+      alt: 'Evolution X\'s Banner "#KeepEvolving"',
+      type: "image/png",
+    },
   },
 };
 
