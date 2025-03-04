@@ -12,9 +12,9 @@ Bypass app restrictions by spoofing components
 
 ### Freeform launch mode
 
-### Hide applist
+### Hide app list
 
-Prevent apps from checking selected apps from appslist
+Prevent apps from checking selected apps from apps list
 
 ### Smart Pixels
 
@@ -30,9 +30,9 @@ Save battery by shutting off extra pixels
 
 Blocks all apps from setting the wallpaper dim\nForces dim to 0
 
-### Unlimit screenrecord
+### Unlimited screen record
 
-Remove the 15GiB file size limit\nMay result in a larger than needed output file
+Remove the 15GiB file size limit\nMay result in a larger than the needed output file
 
 ### Hide Screen Capture Status
 

@@ -30,7 +30,7 @@ Light up the side edges of the screen on notification pulse
 
 ### Kill app
 
-Show a kill app button in the notification's longpress menu
+Show a kill app button in the notification's long press menu
 
 ## Sounds & vibration
 
