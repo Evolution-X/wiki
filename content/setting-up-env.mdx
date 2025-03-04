@@ -8,7 +8,7 @@ import SuccessCallout from "../app/components/SuccessCallout";
 
 # Setting up Environments to build Evolution X
 
-This guide is for **Linux Users** targeting Ubuntu 22.04 LTS users.
+This guide is for **Linux Users** targeting Ubuntu 22.04 LTS.
 
 <Callout type="warning">
   Make sure you have the appropriate performance requirements to build Android !
@@ -18,6 +18,11 @@ This guide is for **Linux Users** targeting Ubuntu 22.04 LTS users.
 <Callout type="info">
   This guide has been tested to work on WSL 2 Ubuntu 24.04.1 LTS
 </Callout>
+
+<Callout type="info">
+  This guide has been tested to work on Ubuntu 20.04.6 LTS
+</Callout>
+
 
 **Don't wanna go thru hassles? Introduce [akhilnarang's script](https://github.com/akhilnarang/scripts) repository.**
 **This method is the fastest one.**
@@ -48,12 +53,8 @@ after you've done these commands you can skip to [Step 3](#h-3-make-a-folder-and
 A 64-bit version of Ubuntu (22.04 is recommended as of now because of LTS).
 
 ```bash
-sudo apt-get update && sudo apt-get install git git-lfs gnupg flex bison gperf libsdl1.2-dev libesd0-dev squashfs-tools build-essential zip curl ccache libncurses5-dev zlib1g-dev openjdk-11-jre openjdk-11-jdk pngcrush schedtool libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev lib32ncurses5-dev gcc-multilib maven tmux screen w3m ncftp rsync libssl-dev
+sudo apt update && sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip unzip zlib1g-dev lib32ncurses5-dev libncurses5 libncurses5-dev python-is-python3
 ```
-
-If you face a problem while installing libesd0-dev package, follow the steps from [this Stack Overflow post](https://askubuntu.com/questions/1082722/unable-to-locate-package-libesd0-dev-on-ubuntu-18-04#)
-
-You can install those packages instead: `libncurses5 curl python-is-python3`
 
 ## Make A Folder And Initialize Repo
 
