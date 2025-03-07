@@ -6,31 +6,7 @@ import "material-symbols";
 import "../styles.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://wiki.evolution-x.org"),
-  title: "Evolution X Wiki",
-  description: "The official wiki for Evolution X.",
-  icons: {
-    icon: "/icon.svg",
-  },
-  openGraph: {
-    type: "website",
-    url: "https://wiki.evolution-x.org",
-    siteName: "Evolution X Wiki",
-    title: "Evolution X Wiki",
-    description: "The official wiki for Evolution X.",
-    determiner: "the",
-    locale: "en_US",
-    images: {
-      url: "/keepevolving.png",
-      width: 4888,
-      height: 1622,
-      alt: 'Evolution X\'s Banner "#KeepEvolving"',
-      type: "image/png",
-    },
-  },
-};
+import { importPage } from "nextra/pages";
 
 const banner = (
   <Banner storageKey="evolution-x-10-3">Evolution X 10.3 released 🎉</Banner>
