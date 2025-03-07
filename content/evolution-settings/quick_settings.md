@@ -50,7 +50,7 @@ Show widgets for quick access. \nLimits QS rows to 2 to avoid breaking AOSP QS P
 
 ### Better landscape QS
 
-Enable new experimental split shade quicksettings,\nbreaks landscape headsup notifications
+Enable new experimental split shade quick settings,\nbreaks landscape heads-up notifications
 
 ### Hide label
 
