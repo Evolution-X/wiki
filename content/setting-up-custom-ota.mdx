@@ -1,0 +1,102 @@
+---
+title: Setting up custom OTA
+description: Learn how to setup custom OTA updates for your Evolution X unofficial builds
+---
+
+import { Callout, Steps, Tabs, Cards } from "nextra/components";
+import SuccessCallout from "../app/components/SuccessCallout";
+
+# Setting Up a Custom OTA Server for Evolution X Unofficial builds
+
+This guide explains how to set up a custom OTA (Over-The-Air) server for your Evolution X build.
+
+## Prerequisites
+
+- A GitHub account
+- A storage server (e.g., Sourceforge, Cloudflare R2, etc.) for hosting your builds
+- A properly configured Android build environment
+
+<Steps>
+## Create an overlay in your device tree
+
+Inside your device tree, locate the overlay-evolution folders you created and inside of them create Updater directory with its subfolders (assuming you commited the EvolutionX init changes)
+
+```bash
+mkdir -p /path/to/overlay-evolution/Updater/res/values/
+```
+
+In the values folder create the file strings.xml and insert the following lines where (user) is your GitHub username
+
+```xml showLineNumbers filename="strings.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/(user)/OTA/vic/builds/{device}.json</string>
+  <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/(user)/OTA/vic/changelogs/<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
+</resources>
+```
+
+## Build and Setup Your OTA Repository
+
+Build your ROM
+
+- Create your Evolution X build using your Android build environment.
+
+```bash
+m evolution
+```
+
+- Ensure the build is successful and all required files are generated.
+- Upload the Evolution X zip file and the needed .img files to install in the target device
+
+Upload Files to Your OTA Repository
+
+1. In your forked **OTA** repository, remove all the existing JSON and TXT files.
+2. Locate and copy the JSON file(s) into the "builds" folder of your OTA repository.
+
+```bash
+cp out/target/product/(device)/(device).json /path/to/OTA/repo/builds/
+```
+
+4. Get yout Evolution X build download link and paste it in the JSON
+5. Edit the JSON file as necessary to fill in all the remaining required fields for your OTA update.
+
+
+Configure Changelogs
+1. Inside the "changelogs" folder, create a new file named (device).txt where (device) is your device identifier.
+2. Add the following content to the (device).txt file:
+
+```txt showLineNumbers filename="(device).txt"
+This is Android (Version) QPRx with (Month) (Year) security patches
+
+Notes:
+==============================
+- LineageOS-based source. Signed build.
+- Make sure to be on (device) firmware first.
+- Clean flash is required if coming from March 2024 or older builds.
+- Always dirty flash at your own risk. If your device bootloops, revert to an older build that boots.
+- (Root advice)
+- Play Integrity passes, RCS works (As of mm/dd/yyyy).
+- Includes (brand) camera.
+
+Device changes:
+==============================
+* (List all changes for your device, including modifications to the device kernel and vendor files.)
+
+Notable ROM changes:
+==============================
+* (List all major changes made to the Evolution X project repositories.)
+```
+
+## Finalize and Commit
+
+After updating your files, commit and push your changes with a descriptive message:
+
+```bash
+git add . && git commit -m "(Device): Initial release" git push
+```
+
+<Callout type="info">
+Test your OTA build on the target device before releasing to the public.
+</Callout>
+
+</Steps>

@@ -72,12 +72,12 @@ Nextra is a documentation builder that uses Next.js and Markdown. ([MDX](https:/
 
 ### Built-in Components
 
-You will probably be using these components and features when writing guides or etc:
+You will probably be using these components and features when writing guides or etc.:
 
 - [Callouts](https://nextra.site/docs/built-ins/callout)
 - [Steps](https://nextra.site/docs/built-ins/steps)
 - [Tabs](https://nextra.site/docs/built-ins/tabs)
-- [Syntax Highlighting](https://nextra.site/docs/guide/syntax-highlighting) (supports highlighting lines, adding filenames, etc)
+- [Syntax Highlighting](https://nextra.site/docs/guide/syntax-highlighting) (supports highlighting lines, adding filenames, etc.)
 - [Markdown](https://nextra.site/docs/guide/markdown#github-flavored-markdown)
 
 ### Inserting Images
