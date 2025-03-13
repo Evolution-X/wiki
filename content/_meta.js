@@ -7,6 +7,9 @@ export default {
   "setting-up-env": (
     <Entry title="Setting up environment" icon="manufacturing" />
   ),
+  "setting-up-env-latest-lts": (
+    <Entry title="Setting up environment latest LTS" icon="manufacturing" />
+  ),
   lunch: <Entry title="Lunch guide" icon="restaurant" />,
   build_flags: <Entry title="Build flags" icon="flag" />,
   "reporting-a-bug": <Entry title="Reporting a bug" icon="bug_report" />,
