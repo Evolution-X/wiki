@@ -1,0 +1,51 @@
+---
+title: Setting up Environments Latest LTS
+description: Learn how to setup a proper environment to build Evolution X on latest Ubuntu LTS
+---
+
+import { Callout, Steps, Tabs, Cards } from "nextra/components";
+import SuccessCallout from "../app/components/SuccessCallout";
+
+# Setting up latest Ubuntu LTS to build Evolution X
+
+This guide is for **Linux Users** targeting Ubuntu 24.04 LTS.
+
+<Callout type="warning">
+  Make sure you have the appropriate performance requirements to build Android !
+  Minimum requirements for A14 are : 12 cores, 64Gb of RAM and 64 bit system.
+</Callout>
+
+<Steps>
+
+## Installing required packages
+
+```bash
+sudo apt update && sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip unzip zlib1g-dev python-is-python3
+```
+
+To build Android in this Ubuntu version you need to install libncurses5 from 23.04 (lunar):
+
+```bash
+wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_amd64.deb && sudo dpkg -i libtinfo5_6.3-2_amd64.deb && rm -f libtinfo5_6.3-2_amd64.deb
+wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2_amd64.deb && sudo dpkg -i libncurses5_6.3-2_amd64.deb && rm -f libncurses5_6.3-2_amd64.deb
+```
+
+## Disable Restricted unprivileged user namespaces
+
+```bash
+sudo echo 'kernel.apparmor_restrict_unprivileged_unconfined=0' >> /etc/sysctl.d/99-sysctl.conf
+sudo echo 'kernel.apparmor_restrict_unprivileged_userns=0' >> /etc/sysctl.d/99-sysctl.conf
+```
+
+## Manually create ccache tmp directory
+For those who want to use ccache, this step is important because if tmp is not created as a folder, the compiler will create tmp as a file and build process will fail with an error saying tmp is not a directory
+
+```bash
+mkdir -p ~/.cache/ccache/tmp/
+```
+
+</Steps>
+
+## Next Step
+
+Once you have completed the Ubuntu setup steps above, please proceed to [Step 3 of the Environment Setup](setting-up-env#h-3-make-a-folder-and-initialize-repo) for further instructions.
