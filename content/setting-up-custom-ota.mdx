@@ -27,7 +27,7 @@ mkdir -p /path/to/overlay-evolution/Updater/res/values/
 
 In the values folder create the file strings.xml and insert the following lines where (user) is your GitHub username
 
-```xml
+```xml showLineNumbers filename="strings.xml"
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/(user)/OTA/vic/builds/{device}.json</string>
@@ -65,7 +65,7 @@ Configure Changelogs
 1. Inside the "changelogs" folder, create a new file named (device).txt where (device) is your device identifier.
 2. Add the following content to the (device).txt file:
 
-```txt
+```txt showLineNumbers filename="(device).txt"
 This is Android (Version) QPRx with (Month) (Year) security patches
 
 Notes:
