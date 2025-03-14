@@ -8,7 +8,7 @@ export default {
     <Entry title="Setting up environment" icon="manufacturing" />
   ),
   "setting-up-env-latest-lts": (
-    <Entry title="Setting up environment latest LTS" icon="manufacturing" />
+    <Entry title="Setting up environment latest LTS" icon="terminal" />
   ),
   "setting-up-custom-ota": (
     <Entry title="Setting up custom OTA" icon="system_update" />
