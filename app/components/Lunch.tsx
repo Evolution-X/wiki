@@ -18,7 +18,7 @@ export const LunchCommand: FC<{ children: ReactNode }> = ({ children }) => {
 
   useEffect(() => {
     if (tokenRef.current) {
-      tokenRef.current.textContent = "ap4a";
+      tokenRef.current.textContent = "bp1a";
     }
   }, [tokenRef.current]);
 

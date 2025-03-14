@@ -38,6 +38,7 @@ sudo echo 'kernel.apparmor_restrict_unprivileged_userns=0' >> /etc/sysctl.d/99-s
 ```
 
 ## Manually create ccache tmp directory
+
 For those who want to use ccache, this step is important because if tmp is not created as a folder, the compiler will create tmp as a file and build process will fail with an error saying tmp is not a directory
 
 ```bash
@@ -48,4 +49,4 @@ mkdir -p ~/.cache/ccache/tmp/
 
 ## Next Step
 
-Once you have completed the Ubuntu setup steps above, please proceed to [Step 3 of the Environment Setup](setting-up-env#h-3-make-a-folder-and-initialize-repo) for further instructions.
+Once you have completed the Ubuntu setup steps above, please proceed to [Step 3 of the Environment Setup](/setting-up-env#make-a-folder-and-initialize-repo) for further instructions.
