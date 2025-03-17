@@ -1,0 +1,70 @@
+---
+title: Setting up custom OTA using Cloudflare R2
+description: Learn how to setup custom OTA updates for your Evolution X unofficial builds, using Cloudflare R2
+---
+
+import { Callout, Steps, Tabs, Cards } from "nextra/components";
+import SuccessCallout from "../app/components/SuccessCallout";
+
+# Why Cloudflare R2?
+
+Compared to SourceForge, Cloudflare R2 provides superior download speed across regions. This will help your users to get updated much faster.
+
+<Callout type="warning">
+  Please note that Cloudflare R2's free tier **only includes 10GB of storage each month** (and about 1 million web operations too,
+  but you won't reach that anyway). This tutorial will only cover for setting up OTA for latest build; use SourceForge to actually
+  store your previous builds if you want.
+</Callout>
+
+## Prerequisites
+
+- An existing Cloudflare account.
+<Callout type="warning">
+  This tutorial will assume you've already set up payment for your Cloudflare account (so you're able to use R2 Storage Bucket feature).
+</Callout>
+- [rclone](https://rclone.org/), which is used to upload builds to R2.
+
+<Steps>
+## Create an overlay in your device tree
+
+Same as **[Setting up custom OTA](/setting-up-custom-ota.mdx)**.
+
+```bash
+mkdir -p /path/to/overlay-evolution/Updater/res/values/
+```
+
+```xml showLineNumbers filename="overlay-evolution/Updater/res/values/strings.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/(user)/OTA/vic/builds/{device}.json</string>
+  <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/(user)/OTA/vic/changelogs/<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
+</resources>
+```
+
+## Set up R2 bucket in Cloudflare
+
+Visit [Cloudflare Dashboard](https://dash.cloudflare.com/) and login to your account. From the top right of the Account Home page, click Add > R2 storage bucket.
+
+![](/ota-cloudflare/1.png)
+
+Next, type in your bucket name (should be your device codename). You can also set your bucket location.
+
+![](/ota-cloudflare/2.png)
+
+Now that you've created your bucket, head to Settings tab and click **Allow Access** on the R2.dev subdomain section. This will activate your download link.
+
+![](/ota-cloudflare/3.png)
+
+## Set up R2 bucket in rclone
+
+**Install rclone**: To install rclone, run the following command:
+
+```bash
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+```
+
+After installing, head to R2 Object Storage overview page. Click API > Manage API tokens.
+
+![](/ota-cloudflare/4.png)
+
+</Steps>

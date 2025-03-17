@@ -13,6 +13,9 @@ export default {
   "setting-up-custom-ota": (
     <Entry title="Setting up custom OTA" icon="system_update" />
   ),
+  "setting-up-custom-ota-using-cloudflare-r2": (
+    <Entry title="Setting up custom OTA using Cloudflare R2" icon="system_update" />
+  ),
   lunch: <Entry title="Lunch guide" icon="restaurant" />,
   build_flags: <Entry title="Build flags" icon="flag" />,
   "reporting-a-bug": <Entry title="Reporting a bug" icon="bug_report" />,
