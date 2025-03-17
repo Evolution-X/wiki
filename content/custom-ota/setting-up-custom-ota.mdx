@@ -4,7 +4,7 @@ description: Learn how to setup custom OTA updates for your Evolution X unoffici
 ---
 
 import { Callout, Steps, Tabs, Cards } from "nextra/components";
-import SuccessCallout from "../app/components/SuccessCallout";
+import SuccessCallout from "../../app/components/SuccessCallout";
 
 # Setting Up a Custom OTA Server for Evolution X Unofficial builds
 
@@ -60,8 +60,8 @@ cp out/target/product/(device)/(device).json /path/to/OTA/repo/builds/
 4. Get yout Evolution X build download link and paste it in the JSON
 5. Edit the JSON file as necessary to fill in all the remaining required fields for your OTA update.
 
-
 Configure Changelogs
+
 1. Inside the "changelogs" folder, create a new file named (device).txt where (device) is your device identifier.
 2. Add the following content to the (device).txt file:
 
@@ -96,7 +96,7 @@ git add . && git commit -m "(Device): Initial release" git push
 ```
 
 <Callout type="info">
-Test your OTA build on the target device before releasing to the public.
+  Test your OTA build on the target device before releasing to the public.
 </Callout>
 
 </Steps>
