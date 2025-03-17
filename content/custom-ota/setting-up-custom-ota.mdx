@@ -19,11 +19,16 @@ This guide explains how to set up a custom OTA (Over-The-Air) server for your Ev
 <Steps>
 ## Create an overlay in your device tree
 
-Inside your device tree, locate the overlay-evolution folders you created and inside of them create Updater directory with its subfolders (assuming you commited the EvolutionX init changes)
+Inside your device tree, locate the `overlay-evolution` folders you created and inside of them create `Updater` directory with its subfolders (assuming you commited the Evolution X init changes)
 
 ```bash
-mkdir -p /path/to/overlay-evolution/Updater/res/values/
+mkdir -p /$device/$your_phone_codename/overlay-evolution/Updater/res/values/
 ```
+
+<Callout type="info">
+  Remember to replace `/$device/$your_phone_codename` with the actual path to
+  your device tree.
+</Callout>
 
 In the values folder create the file strings.xml and insert the following lines where (user) is your GitHub username
 
