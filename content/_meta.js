@@ -1,3 +1,5 @@
+import { Entry } from "../app/components/Entry.jsx";
+
 export default {
   index: <Entry title="Home" icon="home" />,
   "###": {
@@ -10,9 +12,7 @@ export default {
   "setting-up-env-latest-lts": (
     <Entry title="Setting up environment latest LTS" icon="terminal" />
   ),
-  "setting-up-custom-ota": (
-    <Entry title="Setting up custom OTA" icon="system_update" />
-  ),
+  "custom-ota": <Entry title="Custom OTA" icon="system_update" />,
   lunch: <Entry title="Lunch guide" icon="restaurant" />,
   build_flags: <Entry title="Build flags" icon="flag" />,
   "reporting-a-bug": <Entry title="Reporting a bug" icon="bug_report" />,
@@ -35,12 +35,3 @@ export default {
   "support-new-device": <Entry title="Support new device" icon="smartphone" />,
   "evolution-settings": <Entry title="Features" icon="settings" />,
 };
-
-function Entry({ icon, title }) {
-  return (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <span className="material-symbols-rounded">{icon}</span>
-      <span style={{ marginLeft: 8 }}>{title}</span>
-    </div>
-  );
-}
