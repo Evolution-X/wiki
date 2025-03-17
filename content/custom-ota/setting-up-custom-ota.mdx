@@ -22,11 +22,11 @@ This guide explains how to set up a custom OTA (Over-The-Air) server for your Ev
 Inside your device tree, locate the `overlay-evolution` folders you created and inside of them create `Updater` directory with its subfolders (assuming you commited the Evolution X init changes)
 
 ```bash
-mkdir -p /$device/$your_phone_codename/overlay-evolution/Updater/res/values/
+mkdir -p /${device}/${your_phone_codename}/overlay-evolution/Updater/res/values/
 ```
 
 <Callout type="info">
-  Remember to replace `/$device/$your_phone_codename` with the actual path to
+  Remember to replace `/$device/${your_phone_codename}` with the actual path to
   your device tree.
 </Callout>
 
@@ -59,7 +59,7 @@ Upload Files to Your OTA Repository
 2. Locate and copy the JSON file(s) into the "builds" folder of your OTA repository.
 
 ```bash
-cp out/target/product/(device)/(device).json /path/to/OTA/repo/builds/
+cp out/target/product/${device}/${device}.json /path/to/OTA/repo/builds/
 ```
 
 4. Get yout Evolution X build download link and paste it in the JSON
@@ -67,21 +67,21 @@ cp out/target/product/(device)/(device).json /path/to/OTA/repo/builds/
 
 Configure Changelogs
 
-1. Inside the "changelogs" folder, create a new file named (device).txt where (device) is your device identifier.
-2. Add the following content to the (device).txt file:
+1. Inside the "changelogs" folder, create a new file named `${device}.txt` where `${device}` is your device identifier.
+2. Add the following content to the `${device}.txt` file:
 
-```txt showLineNumbers filename="(device).txt"
-This is Android (Version) QPRx with (Month) (Year) security patches
+```txt showLineNumbers filename="${device}.txt"
+This is Android ${version} QPRx with ${month} ${year} security patches
 
 Notes:
 ==============================
 - LineageOS-based source. Signed build.
-- Make sure to be on (device) firmware first.
+- Make sure to be on ${device} firmware first.
 - Clean flash is required if coming from March 2024 or older builds.
 - Always dirty flash at your own risk. If your device bootloops, revert to an older build that boots.
-- (Root advice)
+- ${root advice}
 - Play Integrity passes, RCS works (As of mm/dd/yyyy).
-- Includes (brand) camera.
+- Includes ${brand} camera.
 
 Device changes:
 ==============================
