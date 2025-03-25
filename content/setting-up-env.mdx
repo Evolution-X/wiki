@@ -11,21 +11,23 @@ import SuccessCallout from "../app/components/SuccessCallout";
 This guide is for **Linux Users** targeting Ubuntu 22.04 LTS.
 
 <Callout type="warning">
-  Make sure you have the appropriate performance requirements to build Android !
-  Minimum requirements for A14 are : 12 cores, 64Gb of RAM and 64 bit system.
+  Make sure you have the appropriate performance requirements to build Android!
+  Minimum requirements for A14 are:
+- 12 cores
+- 64Gb of RAM
+- 64 bit system.
+
 </Callout>
 
 <Callout type="info">
-  This guide has been tested to work on WSL 2 Ubuntu 24.04.1 LTS
+  This guide has been tested to work on:
+  
+- WSL 2 Ubuntu 24.04.1 LTS
+- Ubuntu 20.04.6 LTS
+
 </Callout>
 
-<Callout type="info">
-  This guide has been tested to work on Ubuntu 20.04.6 LTS
-</Callout>
-
-
-**Don't wanna go thru hassles? Introduce [akhilnarang's script](https://github.com/akhilnarang/scripts) repository.**
-**This method is the fastest one.**
+### Don't wanna go thru hassles? Introducing [akhilnarang's script](https://github.com/akhilnarang/scripts) repository. This method is the fastest one.
 
 ```bash
 sudo apt install git curl ccache
@@ -35,7 +37,7 @@ sudo apt install git curl ccache
 git clone https://github.com/akhilnarang/scripts; cd scripts; sudo bash setup/android_build_env.sh
 ```
 
-after you've done these commands you can skip to [Step 3](#h-3-make-a-folder-and-initialize-repo)
+after you've done these commands you can skip to [Step 3](#make-a-folder-and-initialize-repo)
 
 ---
 
@@ -165,7 +167,8 @@ Then keep reading this.
 </details>
 
 <Callout type="info">
-  Before running compilation process you can [Set up custom OTA updates](setting-up-custom-ota).
+  Before running compilation process you can [Set up custom OTA
+  updates](setting-up-custom-ota).
 </Callout>
 
 For official and unofficial maintainers

@@ -2,9 +2,9 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "material-symbols": "^0.28.2",
-    "next": "^15.2.0",
-    "nextra": "^4.2.13",
-    "nextra-theme-docs": "^4.2.13",
+    "next": "^15.2.2",
+    "nextra": "^4.2.16",
+    "nextra-theme-docs": "^4.2.16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5"
@@ -16,10 +16,10 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/react": "^19.0.10",
-    "wrangler": "^3.111.0"
+    "wrangler": "^3.114.1"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.7.3"
   },
   "scripts": {
     "dev": "next",
