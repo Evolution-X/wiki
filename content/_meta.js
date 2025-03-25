@@ -12,6 +12,9 @@ export default {
   "setting-up-env-latest-lts": (
     <Entry title="Setting up environment latest LTS" icon="terminal" />
   ),
+  "setting-up-custom-ota": (
+    <Entry title="Setting up custom OTA" icon="system_update" />
+  ),
   "custom-ota": <Entry title="Custom OTA" icon="system_update" />,
   lunch: <Entry title="Lunch guide" icon="restaurant" />,
   build_flags: <Entry title="Build flags" icon="flag" />,
