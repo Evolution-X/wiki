@@ -1,25 +1,25 @@
 {
   "dependencies": {
     "clsx": "^2.1.1",
-    "material-symbols": "^0.28.2",
-    "next": "^15.2.2",
-    "nextra": "^4.2.16",
-    "nextra-theme-docs": "^4.2.16",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sharp": "^0.33.5"
+    "material-symbols": "^0.33.0",
+    "next": "^15.4.3",
+    "nextra": "^4.2.17",
+    "nextra-theme-docs": "^4.2.17",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.34.3"
   },
   "name": "wiki",
   "module": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/react": "^19.0.10",
-    "wrangler": "^3.114.1"
+    "@types/bun": "^1.2.19",
+    "@types/react": "^19.1.8",
+    "wrangler": "^4.25.1"
   },
   "peerDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "dev": "next",
