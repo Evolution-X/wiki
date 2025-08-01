@@ -1,6 +1,6 @@
 ---
-title: Reporting a bug
-description: Learn how to report a bug
+title: Lunch guide
+description: Learn how to use the lunch command
 ---
 
 import { Callout, Image } from "nextra/components";
@@ -8,23 +8,25 @@ import SuccessCallout from "../app/components/SuccessCallout";
 import { LunchCommand } from "../app/components/Lunch";
 
 <Callout type="error">
-  **23/02/2024** **FROM NOW ON, FOR ANDROID 15, YOU NEED TO DO `lunch
-  lineage_$device-ap4a-$build_type`.**
+  {/* 10/06/2025 - https://discord.com/channels/670512508871639041/670566075389313027/1382079789048795338 */}
+  <LunchCommand>
+    **10/06/2025** **FROM NOW ON, FOR ANDROID 16, YOU NEED TO DO: `lunch lineage_$device-$release-$build_type{:bash}`**
+  </LunchCommand>
 </Callout>
 
-Every time a release will change (E.g changing from `ap3a` to `ap4a`) I will update the wiki. If you find out it's not up-to-date, feel free to ping me on discord @onelots or [edit this page](https://github.com/Evolution-X/wiki/edit/main/lunch.md).
-
+{/*
 <Callout type="info">
   Since I will not update the whole wiki every time, I'll use `$release` instead
   of specifying the actual release.
 </Callout>
+*/}
 
 **As of Now : Release is :**
 
-![ap4a.png](/ap4a.png)
-
+![bp2a.png](/bp2a.png)
+<LunchCommand>
 So commands will be in the form `lunch lineage_$device-$release-$build_type{:bash}`.
-
+</LunchCommand>
 # A quick lunch guide
 
 In this guide, we'll see how to use lunch, how it works and how to setup it properly.
@@ -32,8 +34,7 @@ We'll see how to setup a device for building too.
 
 <Callout type="warning">
   Please check [Setup Environment](/setting-up-env) before starting. A minimum
-  git knowledge is required. Besides, make sure the disk you will work on is
-  formatted with **Ext4**.
+  git and Linux knowledge is required.
 </Callout>
 
 # 1: Unofficial build
@@ -137,10 +138,11 @@ lunch lineage_$device-$release-$build_type
 Where `$device` is your device's codename and `$build_type` is the build type. There is a paragraph about it at the end of this guide, we'll come back to it later.
 
 But for Polaris, it would look like
-
+<LunchCommand>
 ```bash
 lunch lineage_polaris-$release-userdebug
 ```
+</LunchCommand>
 
 <SuccessCallout>
   If everything went well, `m evolution` will start the build.
@@ -213,7 +215,7 @@ What will change is the `remote`. You have to pick a remote already defined by E
 
 <Callout type="info">
   Remotes are defined by EvolutionX directly, and you can find remotes list
-  [here](https://github.com/Evolution-X/manifest/blob/udc/snippets/evolution.xml).
+  [here](https://github.com/Evolution-X/manifest/blob/bka/snippets/evolution.xml).
 </Callout>
 
 When it's done, simply lunch
@@ -232,7 +234,10 @@ This command will clone everything for you directly !
 
 # 3: A quick memo about the build args
 
-When lunching, you noticed every time we `lunch lineage_polaris-$release-userdebug`.
+<LunchCommand>
+When lunching, you noticed every time we `lunch lineage_polaris-$release-userdebug{:bash}`.
+</LunchCommand>
+
 Actually, a few more args are available.
 
 | Build Type  | Description                                                                                                                                           |
@@ -242,7 +247,7 @@ Actually, a few more args are available.
 | `eng`       | Includes all development tools and debugging options. Used by developers during active development and testing.                                       |
 
 The different commands would be :
-
+<LunchCommand>
 ```bash
 lunch lineage_polaris-$release-user
 ```
@@ -258,7 +263,7 @@ or
 ```bash
 lunch lineage_polaris-$release-eng
 ```
-
+</LunchCommand>
 <Callout type="error">eng build is **NOT** intended for release.</Callout>
 
 When it's done:

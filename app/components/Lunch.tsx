@@ -7,20 +7,22 @@ import { useEffect, useRef } from "react";
 // From https://github.com/shuding/nextra/blob/main/docs/app/docs/guide/syntax-highlighting/_dynamic-code.tsx
 export const LunchCommand: FC<{ children: ReactNode }> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null!);
-  const tokenRef = useRef<HTMLSpanElement>(undefined);
-  // Find the corresponding token from the DOM
+  const tokenRefs = useRef<HTMLSpanElement[]>([]);
+  // Find all corresponding tokens from the DOM
   useEffect(() => {
-    tokenRef.current = [
+    tokenRefs.current = [
       //@ts-ignore
       ...ref.current.querySelectorAll<HTMLSpanElement>("code > span > span"),
-    ].find((el) => el.textContent === "$release");
+    ].filter((el) => el.textContent === "$release");
   }, []);
 
   useEffect(() => {
-    if (tokenRef.current) {
-      tokenRef.current.textContent = "bp1a";
-    }
-  }, [tokenRef.current]);
+    tokenRefs.current.forEach((token) => {
+      if (token) {
+        token.textContent = "bp2a";
+      }
+    });
+  }, [tokenRefs.current]);
 
   return (
     <>
